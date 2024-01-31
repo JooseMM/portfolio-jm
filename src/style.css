@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+  /* ligh theme*/
+  --light-main-background: #E6F7F7;
+  --light-alt-main-background: #C3D9D9;
+  --light-stack-bg-color: #BECCCC;
+  --light-medium-main-color: #004040;
+  --light-dark-main-color: #006666;
+  --light-black: #1D2626;
+  --light-pale-ct: #639999;
+  --light-darker-ct: #639999;
+  /* dark theme*/
+  /* */
+}
+
+  /* element styles */
+html {
+  background-color: var(--light-main-background);
+  color: var(--light-black);
+}
+header {
+  margin-block: 1.5rem;
+  position: relative;
+}
+body {
+  margin-inline: 10vw;
+}
+/* helper classes */
+.rounded {
+  border-radius: 0.3rem;
+}
+.flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.hidden {
+  display: none;
+}
+.showMenu {
+  display: flex;
+  background-color: var(--light-alt-main-background);
+  position: absolute;
+  right: 0;
+  top: 200%;
+  width: 200px;
+  padding-block: 2rem;
+  text-align: center;
+
+}
+.center-vertically {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+/* custom classes */
+.logo {
+  font-weight: 500;
+}
+.mobile-menu {
+  width: 2rem;
+}
+.menu-btn {
+  width: 100%;
+}
+.nav-link-list li a {
+  opacity: 70%;
+}
+.nav-link-list li:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
