@@ -1,14 +1,19 @@
 //UI variables states
 const mobileMenu = document.getElementById("mobileMenu");
-const mobileMenuBtn = document.getElementById('themeSwitcher');
+const mobileMenuBtn = document.getElementById("toogleMobileBtn");
+const mobileMenuImageaBtn = document.getElementById("menuBtnImage");
 
 //functions 
 function toogleMobileMenu():void {
   if(mobileMenu?.classList.contains("hidden")) {
+    mobileMenuImageaBtn?.setAttribute("src", "src/assets/icons/close-icon.svg");
+    mobileMenuImageaBtn?.setAttribute("width", "70");
     mobileMenu?.classList.remove("hidden");
     mobileMenu?.classList.add("showMenu");
     return
   }
+    mobileMenuImageaBtn?.setAttribute("src", "src/assets/icons/mobile-menu-btn.svg");
+    mobileMenuImageaBtn?.setAttribute("width", "50");
     mobileMenu?.classList.remove("showMenu");
     mobileMenu?.classList.add("hidden");
 }
