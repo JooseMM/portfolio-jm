@@ -7,13 +7,13 @@ const mobileMenuImageaBtn = document.getElementById("menuBtnImage");
 function toogleMobileMenu():void {
   if(mobileMenu?.classList.contains("hidden")) {
     mobileMenuImageaBtn?.setAttribute("src", "src/assets/icons/close-icon.svg");
-    mobileMenuImageaBtn?.setAttribute("width", "70");
+    mobileMenuImageaBtn?.setAttribute("width", "22");
     mobileMenu?.classList.remove("hidden");
     mobileMenu?.classList.add("showMenu");
     return
   }
     mobileMenuImageaBtn?.setAttribute("src", "src/assets/icons/mobile-menu-btn.svg");
-    mobileMenuImageaBtn?.setAttribute("width", "50");
+    mobileMenuImageaBtn?.setAttribute("width", "35");
     mobileMenu?.classList.remove("showMenu");
     mobileMenu?.classList.add("hidden");
 }

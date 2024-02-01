@@ -8,10 +8,11 @@
   --light-medium-main-color: #006666;
   --light-dark-main-color: #004040;
   --light-black: #1D2626;
-  --light-black-90: #1D2626;
+  --light-black-90: #4F5A5A;
   --light-black-80: #4F5A5A;
   --light-pale-ct: #639999;
   --light-darker-ct: #639999;
+  --light-box-image: #639999;
   /* dark theme*/
   /* */
 }
@@ -26,7 +27,6 @@ header {
   position: relative;
 }
 body {
-  margin-inline: 10vw;
   text-align: center;
 }
 main section:first-child {
@@ -42,10 +42,23 @@ h1 {
    font-size: 2.5rem;
    font-weight: 400;
 }
+h2 {
+  color: var(--light-black);
+}
 b:not(.full-name){
    color: var(--light-medium-main-color);
 }
 /* helper classes */
+.flex-col {
+  flex-direction: column;
+}
+.padding-10vw {
+  padding-inline: 10vw;
+}
+.padding-5vw {
+  padding-inline: 5vw;
+}
+
 .rounded {
   border-radius: 0.3rem;
 }
@@ -64,7 +77,7 @@ b:not(.full-name){
   position: absolute;
   z-index: 10;
   right: 0;
-  top: 200%;
+  top: 3.5rem;
   width: 200px;
   padding-block: 2rem;
   text-align: center;
@@ -86,9 +99,6 @@ b:not(.full-name){
 }
 .mobile-menu {
   width: 2rem;
-}
-.menu-btn {
-  width: 100%;
 }
 .nav-link-list li a {
   color: var(--light-dark-80);
@@ -134,4 +144,54 @@ b:not(.full-name){
   background-color: var(--light-stack-bg-color);
   padding: 0.7rem 1rem;
  }
+ .stack-ct li img {
+  margin:0;
+  width: 100%;
+  height: 100%;
+ }
+ .stack-ct li {
+   width: 35px;
+   height: 30px;
+ }
  /* projects */
+ .projects-ct {
+   margin-top: 3rem;
+   padding-block: 3rem;
+   background-color: var(--light-alt-main-background);
+ }
+ .main-header {
+   padding: 0.5rem 2.5rem;
+   background-color: var(--light-alt-main-background);
+ }
+ .alt-header {
+   padding: 0.5rem 2.5rem;
+   background-color: var(--light-main-background);
+   margin-bottom: 1rem;
+   width: fit-content;
+ }
+ .project-box {
+   width: 100%;
+   padding: 3vw;
+   background-color: var(--light-main-background);
+ }
+ .box-description > h4 {
+   margin-bottom: 0.5rem;
+   color: var(--light-black-90);
+   font-size: 1.3rem;
+ }
+ .box-image-ct {
+  background-color: var(--light-box-image);
+  overflow: hidden;
+ }
+ .box-image-phone {
+   transform: translateY(15%);
+    margin-right: 0.5rem;
+ }
+ .box-description {
+   margin-top: 1rem;
+   padding-inline: 1.5vw;
+ }
+ /* remove stack-ct margin to make it 
+  * reusable */
+
+  
