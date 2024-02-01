@@ -48,6 +48,9 @@ h2 {
 b:not(.full-name){
    color: var(--light-medium-main-color);
 }
+.project-box ul li, .project-box ul {
+  width: 80%;
+}
 /* helper classes */
 .flex-col {
   flex-direction: column;
@@ -91,6 +94,9 @@ b:not(.full-name){
 }
 .justify-between {
   justify-content: space-between;
+}
+.rounded-xl {
+  border-radius: 0.6rem;
 }
 /* custom classes */
 /* header */
@@ -140,7 +146,6 @@ b:not(.full-name){
   bottom: -60%;
  }
  .stack-ct {
-  margin-top: 2.5rem;
   background-color: var(--light-stack-bg-color);
   padding: 0.7rem 1rem;
  }
@@ -152,6 +157,9 @@ b:not(.full-name){
  .stack-ct li {
    width: 35px;
    height: 30px;
+ }
+ .hero-description > ul {
+   margin-top: 2rem;
  }
  /* projects */
  .projects-ct {
@@ -171,13 +179,14 @@ b:not(.full-name){
  }
  .project-box {
    width: 100%;
-   padding: 3vw;
+   max-width: 360px;
+   padding: 1rem;
    background-color: var(--light-main-background);
  }
  .box-description > h4 {
    margin-bottom: 0.5rem;
    color: var(--light-black-90);
-   font-size: 1.3rem;
+   font-size: 1.5rem;
  }
  .box-image-ct {
   background-color: var(--light-box-image);
@@ -191,7 +200,44 @@ b:not(.full-name){
    margin-top: 1rem;
    padding-inline: 1.5vw;
  }
- /* remove stack-ct margin to make it 
-  * reusable */
-
+ .box-description > ul {
+   width: 100%;
+   margin-top: 1rem;
+ }
+ .box-description > ul li {
+   width: 45px;
+   height: 35px;
+ }
+ .box-btn {
+   margin-top: 1.2rem;
+ }
+ .box-btn > a {
+  font-size: 1.2rem;
+  padding: 1rem 3rem;
+ }
+ .main-cta-btn + a {
+   margin-left: 1rem;
+   outline: 2px solid var(--light-dark-main-color);
+   border-radius: 0.3rem;
+   padding: 0.9rem 2.5rem
+ }
   
+ @media only screen and (max-width: 380px) {
+  
+ .box-btn > a {
+  font-size: 1.2rem;
+  padding: 1rem 10vw;
+ }
+ .main-cta-btn + a {
+   padding: 0.9rem 8vw 
+ }
+ .box-image-phone {
+    margin-right: 0;
+ }
+ .project-box {
+   padding: 5vw 3vw;
+ }
+ .box-description > ul {
+   width: 95%;
+ }
+ }
