@@ -10,7 +10,7 @@
   <body>
     <header class="flex center-vertically justify-between padding-10vw">
       <p class="logo">Jose M.</p> 
-      <nav id="mobileMenu" class="hidden | center-vertically justify-center rounded">
+      <nav id="mobileMenu" class="hidden | center-vertically justify-center rounded-xl">
 	<ul class="nav-link-list">
 	  <li>
 	    <a href="/">Inicio</a>
@@ -35,7 +35,7 @@
 	   <div class="hero-image-ct">
 			<!-- goes here --> 
 	   </div>
-	<div class="hero-description justify-center">
+	<div class="hero-description flex flex-col center-vertically justify-center">
 		<h1>Soy <b>Jose</b>,<br/>Frontend Dev.</h1>
 		<p>Hola! mi nombre es <b class="full-name">Jose Moreno</b>, un desarrollador web autodidacta, con bases fuertes en diseño de UI UX.</p>
 		<div class="hero-cta flex center-vertically justify-center">
@@ -44,7 +44,7 @@
 				<a href="/">Proyectos<img src="/src/assets/icons/arrow-right.svg" class="cta-decorator"/></a>
 			</div>
 		</div>
-		<ul class="stack-ct rounded flex justify-between center-vertically">
+		<ul class="stack-ct rounded-xl flex justify-between center-vertically">
 		  <li>
 		    <img src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
 		  </li>
@@ -67,7 +67,7 @@
 	</div>
 	</section>
 	<section class="flex flex-col center-vertically justify-center projects-ct padding-5vw">
-	  <div class="alt-header rounded">
+	  <div class="header-ct rounded">
 	    <h2>Proyectos</h2>
 	  </div>
 
@@ -80,30 +80,114 @@
 	      <h4><b>Todo</b> App</h4>
 	      <p>Lorem ipsum dolor sit amet consectetur. Viverra leo erat vulputate ac nulla fermentum. </p>
 	      <ul class="stack-ct rounded flex justify-between center-vertically rounded-xl">
-		  <li>
-		    <img src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
-		  </li>
-		  <li>
-		    <img src="/src/assets/icons/express-logo.svg" width="40" class="center-vertically" alt=""/>
-		  </li>
-		  <li>
-		    <img src="/src/assets/icons/tailwind-logo.svg" width="40" alt=""/>
-		  </li>
-		  <li>
-		    <img src="/src/assets/icons/figma-logo.svg" width="40" alt=""/>
-		  </li>
-		  <li>
-		    <img src="/src/assets/icons/angular-logo.svg" width="40" alt=""/>
-		  </li>
+		<li>
+		  <img src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
+		</li>
+		<li>
+		  <img src="/src/assets/icons/express-logo.svg" width="40" class="center-vertically" alt=""/>
+		</li>
+		<li>
+		  <img src="/src/assets/icons/tailwind-logo.svg" width="40" alt=""/>
+		</li>
+		<li>
+		  <img src="/src/assets/icons/figma-logo.svg" width="40" alt=""/>
+		</li>
+		<li>
+		  <img src="/src/assets/icons/angular-logo.svg" width="40" alt=""/>
+		</li>
 	      </ul>
 	      <div class="box-btn flex center-vertically">
-	      <a href="https://todo-app-jm.netlify.app/home" target="_blank" class="main-cta-btn rounded">Visitar</a>
-	      <a href="" >Codigo</a>
+		<a href="https://todo-app-jm.netlify.app/home" target="_blank" class="main-cta-btn rounded">Visitar</a>
+		<a href="" >Codigo</a>
 	      </div>
 	    </div>
 	  </div>
 	</section>
+	<section class="about-ct flex flex-col center-vertically justify-center  padding-5vw">
+	  <img src="./src/assets/images/mockup-portrait.svg"/>
+	  <div class="header-ct rounded">
+	    <h2>Sobre mi</h2>
+	  </div>
+	  <div class="flex flex-col justify-center rounded center-vertically">
+	    <p>
+	    Lorem <b>Jose Moreno</b> sit amet consectetur. Libero mattis fermentum tortor a erat et. Et turpis ut cursus quam in porttitor nulla ullamcorper. A nibh curabitur eget ornare quis amet faucibus.<br><br>
+	    Lorem ipsum dolor sit amet consectetur. Libero mattis fermentum tortor a erat et. Por aca te dejo varias de las cosas que me hacen disfrutar aun mas del desarrollo web.
+	    </p>
+	    <ul class="flex">
+	      <li class="flex justify-center center-vertically">
+		<a class="flex justify-center center-vertically" href="/">
+		  <img src="./src/assets/icons/whatsapp-icon.svg" width="35" height="35"/>
+		</a>
+	      </li>
+	      <li class="flex justify-center center-vertically">
+		<a class="flex justify-center center-vertically" href="/">
+		  <img src="./src/assets/icons/ig-icon.svg" width="35" height="35"/>
+		</a>
+	      </li>
+	      <li class="flex justify-center center-vertically">
+		<a class="flex justify-center center-vertically" href="/">
+		  <img src="./src/assets/icons/github-icon.svg" width="35" height="35"/>
+		</a>
+	      </li>
+	    </ul>
+	  </div>
+	</section>
+	<section class="cta-ct flex flex-col center-vertically justify-center">
+	  <h2>¿Te interesa trabajar conmigo?</h2>
+	  <a href="/" class="rounded">Contactame</a>
+	</section>
     </main>
+    <footer class="flex flex-col justify-center center-verctically">
+      <ul class="footer-this">
+	<li>
+	  <a href="/">Jose Moreno</a>
+	</li>
+	<li>Copyright 2024</li>
+      </ul>
+      <ul class="footer-pages">
+	<li>
+	  Secciones
+	</li>
+	<li>
+	  <a href="/">Inicio</a>
+	</li>
+	<li>
+	  <a href="/">Proyecto</a>
+	</li>
+	<li>
+	  <a href="/">Sobre mi</a>
+	</li>
+	<li>
+	  <a href="/">Contacto</a>
+	</li>
+      </ul>
+      <ul class="footer-address">
+	<li>
+	  Direcciones
+	</li>
+	<li> Santiago de Chile</li>
+      </ul>
+      <ul class="footer-social center-vertically justify-center">
+	<li>Redes Sociales</li>
+	<div class="flex center-vertically justify-center">
+	<li class="flex justify-center center-vertically">
+	  <a class="flex justify-center center-vertically" href="/">
+	    <img src="./src/assets/icons/whatsapp-icon.svg" width="35" height="35"/>
+	  </a>
+	</li>
+	<li class="flex justify-center center-vertically">
+	  <a class="flex justify-center center-vertically" href="/">
+	    <img src="./src/assets/icons/ig-icon.svg" width="35" height="35"/>
+	  </a>
+	</li>
+	<li class="flex justify-center center-vertically">
+	  <a class="flex justify-center center-vertically" href="/">
+	    <img src="./src/assets/icons/github-icon.svg" width="35" height="35"/>
+	  </a>
+	</li>
+	</div>
+      </ul>
+    </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
