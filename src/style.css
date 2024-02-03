@@ -68,7 +68,7 @@ b:not(.full-name){
    color: var(--light-medium-main-color);
 }
 .project-box ul li, .project-box ul {
-  width: 80%;
+   width: 95%;
 }
 /* helper classes */
 .flex-col {
@@ -222,15 +222,15 @@ b:not(.full-name){
  }
  .box-image-phone {
    transform: translateY(15%);
-    margin-right: 0.5rem;
+    margin-right: 0;
  }
  .box-description {
    margin-top: 1rem;
    padding-inline: 1.5vw;
  }
  .box-description > ul {
-   width: 100%;
    margin-top: 1rem;
+   width: 100%;
  }
  .box-description > ul li {
    width: 45px;
@@ -241,13 +241,13 @@ b:not(.full-name){
  }
  .box-btn > a {
   font-size: 1.2rem;
-  padding: 1rem 3rem;
+  padding: 1rem 10vw;
  }
  .main-cta-btn + a {
    margin-left: 1rem;
    outline: 2px solid var(--light-dark-main-color);
    border-radius: 0.3rem;
-   padding: 0.9rem 2.5rem
+   padding: 0.9rem 8vw 
  }
  .about-ct {
    background-image: url(./assets/images/bg-svg-about.png), url(./assets/images/bg-svg-about.png);
@@ -271,10 +271,11 @@ b:not(.full-name){
   font-size: 1.2rem;
 }
 .about-ct > div:last-child {
-  padding: 7vw 1.5rem;
+  padding: 5vw 2rem;
   margin-top: 0.5rem;
   margin-bottom: 5rem;
   background-color: var(--light-alt-main-background);
+  max-width: 380px;
 }
 .about-ct ul {
   margin-top: 2rem;
@@ -296,19 +297,19 @@ b:not(.full-name){
   background-color: var(--light-medium-main-color);
   background-image: url(./assets/images/cta-bg.svg), url(./assets/images/cta-bg.svg);
   background-repeat: no-repeat;
-  background-position: 15% -20%, 120% 98%;
+  background-position: 15% -25%, 90% 130%;
   padding: 10rem 1rem;
-  color: white ;
+  color: white;
 }
 .cta-ct > h2 {
-  font-size: 2.8rem;
+  font-size:2rem ;
   color: white;
   max-width: 17ch;
 }
 .cta-ct > a {
   margin-top: 1.8rem;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   background-color: var(--light-black);
   padding: 1rem 2.5rem;
 }
@@ -319,22 +320,44 @@ b:not(.full-name){
   opacity: 100%;
 }
   
- @media only screen and (max-width: 380px) {
+ @media only screen and (min-width: 380px) {
   
  .box-btn > a {
   font-size: 1.2rem;
-  padding: 1rem 10vw;
+  padding: 1rem 3rem;
  }
  .main-cta-btn + a {
-   padding: 0.9rem 8vw 
+   padding: 0.9rem 2.5rem
  }
+.cta-ct {
+  padding: 8rem 1rem;
+}
+.cta-ct > a {
+  margin-top: 1.5rem;
+}
  .box-image-phone {
-    margin-right: 0;
+    margin-right: 0.5rem;
  }
  .project-box {
-   padding: 5vw 3vw;
+   padding: 3vw;
  }
  .box-description > ul {
-   width: 95%;
+  width: 95%;
+ }
+.cta-ct > h2 {
+  font-size: 2.5rem;
+}
+ }
+ @media only screen and (min-width: 700px) {
+   .project-box {
+     display: flex;
+     max-width: 665px;
+   }
+ .box-description {
+   max-width: 40%;
+   padding: 1rem;
+ }
+ .box-image-ct {
+   max-width: 60%;
  }
  }
