@@ -249,13 +249,14 @@ b:not(.full-name){
    border-radius: 0.3rem;
    padding: 0.9rem 8vw 
  }
+/* about section */
  .about-ct {
-   background-image: url(./assets/images/bg-svg-about.png), url(./assets/images/bg-svg-about.png);
+   background-image: url(./assets/images/bg-svg-about.svg), url(./assets/images/bg-svg-about.svg);
    background-size: 35vw;
    background-position: 101% -2%, -20% 45%;
    background-repeat: no-repeat;
  }
-.about-ct > div:first-of-type {
+.about-box-description > .header-ct {
   background-color: var(--light-alt-main-background);
   margin-top: 2.5rem;
 }
@@ -270,27 +271,29 @@ b:not(.full-name){
 .about-ct p {
   font-size: 1.2rem;
 }
-.about-ct > div:last-child {
-  padding: 5vw 2rem;
+.about-box-description > div:last-child {
   margin-top: 0.5rem;
-  margin-bottom: 5rem;
   background-color: var(--light-alt-main-background);
   max-width: 380px;
+}
+.about-box-description div:last-child {
+  /*padding: 5vw 2rem;*/
+  padding: 1rem;
 }
 .about-ct ul {
   margin-top: 2rem;
 }
-.about-ct ul li {
+.about-box-description ul li {
   background-color: var(--light-black);
   border-radius: 100%;
   width: 60px;
   height: 60px;
 }
 
-.about-ct ul li:not(:last-child) {
+.about-box-description ul li:not(:last-child) {
   margin-right: 5vw;
 }
-.about-ct ul li img, .about-ct ul li a {
+.about-box-description  li img, .about-box-description ul li a {
   width: 100%;
 }
 .cta-ct {
@@ -320,44 +323,136 @@ b:not(.full-name){
   opacity: 100%;
 }
   
- @media only screen and (min-width: 380px) {
-  
- .box-btn > a {
-  font-size: 1.2rem;
-  padding: 1rem 3rem;
- }
- .main-cta-btn + a {
-   padding: 0.9rem 2.5rem
- }
-.cta-ct {
-  padding: 8rem 1rem;
-}
-.cta-ct > a {
-  margin-top: 1.5rem;
-}
- .box-image-phone {
+@media only screen and (min-width: 400px) {
+  .box-btn {
+    justify-items: center;
+  }
+  .box-btn > a {
+    font-size: 1.2rem;
+    padding: 1rem 2.8rem;
+  }
+  .main-cta-btn + a {
+    padding: 0.9rem 2rem
+  }
+  .cta-ct {
+    padding: 8rem 1rem;
+  }
+  .cta-ct > a {
+    margin-top: 1.5rem;
+  }
+  .box-image-phone {
     margin-right: 0.5rem;
- }
- .project-box {
-   padding: 3vw;
- }
- .box-description > ul {
-  width: 95%;
- }
-.cta-ct > h2 {
-  font-size: 2.5rem;
+  }
+  .project-box {
+    padding: 0.8rem;
+  }
+  .box-description p {
+    max-width: 90%;
+  }
+  .box-description > ul {
+    width: 95%;
+  }
+  .cta-ct > h2 {
+    font-size: 2.5rem;
+  }
 }
- }
- @media only screen and (min-width: 700px) {
-   .project-box {
-     display: flex;
-     max-width: 665px;
-   }
- .box-description {
-   max-width: 40%;
-   padding: 1rem;
- }
- .box-image-ct {
-   max-width: 60%;
- }
- }
+@media only screen and (min-width: 725px) {
+  .project-box {
+    display: flex;
+    max-width: 700px;
+    text-align: start;
+    padding: 1rem;
+  }
+  .projects-ct .box-description {
+    align-items: start;
+  }
+  .box-image-ct {
+    height: 263.58px;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    margin-right: 0.5rem;
+  }
+  .box-image-ct > .box-image-pc {
+    width: 90%;
+    transform: translateY(80%);
+  }
+  .box-image-ct > .box-image-phone {
+    order: 2;
+    margin: 0;
+    width: 120px;
+    transform: translate(50%, 5%);
+  }
+  .box-description {
+    margin: 0;
+    width: 55%;
+    justify-content: center;
+  }
+  .box-description > p {
+    font-size: 1.1rem;
+  }
+  .box-description > h4 {
+    font-size: 1.7rem;
+  }
+  .box-description > .stack-ct {
+    order: 4;
+    width: 100%;
+  }
+  .box-description .stack-ct img {
+    width: 100%;
+  }
+  .box-btn {
+    margin-top: 0.9rem;
+  }
+  .box-description > .box-btn > a:first-child {
+    padding: 0.9rem 2.5rem;
+  }
+  .box-description > .box-btn > a:last-child {
+    padding: 0.8rem 2.5rem;
+    margin-left: 0.8rem;
+  }
+  .about-ct {
+    flex-direction: row;
+  }
+  .about-box-description {
+    padding-block: 8rem;
+  }
+  .about-box-description .header-ct {
+    margin: 0;
+    margin-bottom: 1.3rem;
+  }
+  .about-box-description ul li:not(:last-child) {
+    margin-right: 1rem;
+  }
+  .about-box-description ul {
+    position: relative;
+    right: -15%;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .about-ct {
+    background-size: 15vw, 20vw;
+    background-position: 10% -13%, 50% 120%;
+  }
+  .about-ct > img:first-of-type {
+    margin-top: 0rem;
+    margin-right: 2rem;
+  }
+  .about-ct p {
+    font-size: 1rem;
+    text-align: left;
+  }
+  .about-ct > div:last-child {
+    margin: 0;
+  }
+  .cta-ct h2 {
+    max-width: none;
+  }
+  .cta-ct {
+    background-size: 23vw, 25vw;
+    background-position: 95% -70%, 10% 185%;
+  }
+  .cta-ct a {
+    margin-top: 1rem;
+  }
+}
