@@ -71,6 +71,10 @@ b:not(.full-name){
    width: 95%;
 }
 /* helper classes */
+.gird {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 .flex-col {
   flex-direction: column;
 }
@@ -122,6 +126,7 @@ b:not(.full-name){
 /* header */
 .logo {
   font-weight: 500;
+  color: var(--light-black);
 }
 .mobile-menu {
   width: 2rem;
@@ -205,7 +210,11 @@ b:not(.full-name){
    margin-bottom: 1rem;
    width: fit-content;
  }
+ .projects-ct .header-ct {
+   margin-inline: auto;
+ }
  .project-box {
+   margin-inline: auto;
    width: 100%;
    max-width: 360px;
    padding: 1rem;
@@ -237,7 +246,8 @@ b:not(.full-name){
    height: 35px;
  }
  .box-btn {
-   margin-top: 1.2rem;
+   margin-top: 1rem;
+   margin-bottom: 0.5rem;
  }
  .box-btn > a {
   font-size: 1.2rem;
@@ -279,6 +289,7 @@ b:not(.full-name){
 .about-box-description div:last-child {
   /*padding: 5vw 2rem;*/
   padding: 1rem;
+  margin-bottom: 5rem;
 }
 .about-ct ul {
   margin-top: 2rem;
@@ -300,7 +311,7 @@ b:not(.full-name){
   background-color: var(--light-medium-main-color);
   background-image: url(./assets/images/cta-bg.svg), url(./assets/images/cta-bg.svg);
   background-repeat: no-repeat;
-  background-position: 15% -25%, 90% 130%;
+  background-position: 15% -30%, 90% 130%;
   padding: 10rem 1rem;
   color: white;
 }
@@ -336,6 +347,7 @@ b:not(.full-name){
   }
   .cta-ct {
     padding: 8rem 1rem;
+    background-position: 5% -35%, 120% 95%;
   }
   .cta-ct > a {
     margin-top: 1.5rem;
@@ -432,7 +444,7 @@ b:not(.full-name){
   }
   .about-ct {
     background-size: 15vw, 20vw;
-    background-position: 10% -13%, 50% 120%;
+    background-position: 10% -12%, 50% 117%;
   }
   .about-ct > img:first-of-type {
     margin-top: 0rem;
@@ -449,10 +461,35 @@ b:not(.full-name){
     max-width: none;
   }
   .cta-ct {
-    background-size: 23vw, 25vw;
-    background-position: 95% -70%, 10% 185%;
+    background-size: 10rem, 13rem;
+    background-position: 100% -45%, 10% 200%;
   }
   .cta-ct a {
     margin-top: 1rem;
   }
 }
+@media only screen and (min-width: 1000px) {
+  .mobile-menu {
+    display: none;
+  }
+  .hidden {
+    display: flex; 
+  }
+  .hidden ul {
+    display: flex;
+    flex-direction: row;
+  }
+  header > a {
+    margin-right: 2.5rem;
+  }
+  .hidden > ul > li:not(:last-child) {
+    margin: 0;
+    margin-right: 2.5rem;
+  }
+.nav-link-list li a {
+  font-size: 1rem;
+}
+  .justify-between {
+    justify-content: flex-start;
+  }
+} 
