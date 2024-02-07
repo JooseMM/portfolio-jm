@@ -492,4 +492,25 @@ b:not(.full-name){
   .justify-between {
     justify-content: flex-start;
   }
+  main {
+    text-align: left;
+  }
+  /* hero section */ 
+  main section:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .hero-description {
+    align-items: flex-start;
+  }
+  .hero-description h1 {
+    font-size: 3rem;
+  }
+  .hero-description p {
+    max-width: 30ch;
+  }
+  .hero-description .stack-ct {
+    margin-top: 1.5rem;
+  }
 } 
