@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="./src/style.css">
   </head>
   <body>
-    <header class="flex center-vertically justify-between padding-10vw">
+    <header>
       <a href="/" class="logo">Jose M.</a> 
-      <nav id="mobileMenu" class="hidden | center-vertically justify-center rounded-xl">
+      <nav id="mobileMenu" class="hidden | rounded-xl">
 	<ul class="nav-link-list">
 	  <li>
 	    <a href="/">Inicio</a>
@@ -27,29 +27,29 @@
 	</ul>
       </nav>
       <button id="toogleMobileBtn" class="mobile-menu">
-	<img src="src/assets/icons/mobile-menu-btn.svg" id="menuBtnImage" class=" menu-btn" height="25" width="35"/>
+	<img src="src/assets/icons/mobile-menu-btn.svg" id="menuBtnImage" class="menu-btn" height="25" width="35"/>
       </button>
     </header>
     <main>
-	<section class="padding-10vw">
+	<section>
 	   <div class="hero-image-ct">
 			<!-- goes here --> 
 	   </div>
-	<div class="hero-description flex flex-col center-vertically justify-center">
+	   <div class="hero-description"> 
 		<h1>Soy <b>Jose</b>,<br/>Frontend Dev.</h1>
 		<p>Hola! mi nombre es <b class="full-name">Jose Moreno</b>, un desarrollador web autodidacta, con bases fuertes en diseño de UI UX.</p>
-		<div class="hero-cta flex center-vertically justify-center">
+		<div class="hero-cta">
 			<a href="/" class="main-cta-btn rounded">Contratame</a>
 			<div class="cta-decorator-ct flex">
 				<a href="/">Proyectos<img src="/src/assets/icons/arrow-right.svg" class="cta-decorator"/></a>
 			</div>
 		</div>
-		<ul class="stack-ct rounded-xl flex justify-between center-vertically">
+		<ul class="stack-ct">
 		  <li>
 		    <img src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
 		  </li>
 		  <li>
-		    <img src="/src/assets/icons/express-logo.svg" width="40" class="center-vertically" alt=""/>
+		    <img src="/src/assets/icons/express-logo.svg" width="40" alt=""/>
 		  </li>
 		  <li>
 		    <img src="/src/assets/icons/tailwind-logo.svg" width="40" alt=""/>
@@ -66,25 +66,25 @@
 		</ul>
 	</div>
 	</section>
-	<section class="grid projects-ct padding-5vw">
+	<section class="projects-ct">
 	  <div class="header-ct rounded">
 	    <h2>Proyectos</h2>
 	  </div>
 
 	  <div class="project-box rounded">
-	    <div class="box-image-ct rounded flex justify-center">
+	    <div class="box-image-ct rounded">
 	      <img src="src/assets/images/phone-mockup.svg" class="box-image-phone" width="80"/>
 	      <img src="src/assets/images/notebook-mockup.svg" class="box-image-pc" width="180"/>
 	    </div>
-	    <div class="box-description flex flex-col center-vertically">
+	    <div class="box-description">
 	      <h4><b>Todo</b> App</h4>
 	      <p>Lorem ipsum dolor sit amet consectetur. Viverra leo erat vulputate ac nulla fermentum. </p>
-	      <ul class="stack-ct rounded flex justify-between center-vertically rounded-xl">
+	      <ul class="stack-ct">
 		<li>
 		  <img src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
 		</li>
 		<li>
-		  <img src="/src/assets/icons/express-logo.svg" width="40" class="center-vertically" alt=""/>
+		  <img src="/src/assets/icons/express-logo.svg" width="40" alt=""/>
 		</li>
 		<li>
 		  <img src="/src/assets/icons/tailwind-logo.svg" width="40" alt=""/>
@@ -103,30 +103,30 @@
 	    </div>
 	  </div>
 	</section>
-	<section class="about-ct flex flex-col center-vertically justify-center  padding-5vw">
+	<section class="about-ct padding-5vw">
 	  <img src="./src/assets/images/mockup-portrait.svg"/>
-	  <div class="about-box-description flex flex-col center-vertically">
+	  <div class="about-box-description">
 	    <div class="header-ct rounded">
 	      <h2>Sobre mi</h2>
 	    </div>
-	    <div class="flex flex-col justify-center rounded center-vertically">
+	    <div class="rounded">
 	      <p>
 	      Lorem <b>Jose Moreno</b> sit amet consectetur. Libero mattis fermentum tortor a erat et. Et turpis ut cursus quam in porttitor nulla ullamcorper. A nibh curabitur eget ornare quis amet faucibus.<br><br>
 	      Lorem ipsum dolor sit amet consectetur. Libero mattis fermentum tortor a erat et. Por aca te dejo varias de las cosas que me hacen disfrutar aun mas del desarrollo web.
 	      </p>
 	      <ul class="flex">
-		<li class="flex justify-center center-vertically">
-		  <a class="flex justify-center center-vertically" href="/">
+		<li>
+		  <a href="/">
 		    <img src="./src/assets/icons/whatsapp-icon.svg" width="35" height="35"/>
 		  </a>
 		</li>
-		<li class="flex justify-center center-vertically">
-		  <a class="flex justify-center center-vertically" href="/">
+		<li>
+		  <a href="/">
 		    <img src="./src/assets/icons/ig-icon.svg" width="35" height="35"/>
 		  </a>
 		</li>
-		<li class="flex justify-center center-vertically">
-		  <a class="flex justify-center center-vertically" href="/">
+		<li>
+		  <a href="/">
 		    <img src="./src/assets/icons/github-icon.svg" width="35" height="35"/>
 		  </a>
 		</li>
@@ -134,12 +134,12 @@
 	    </div>
 	  </div>
 	</section>
-	<section class="cta-ct flex flex-col center-vertically justify-center">
+	<section class="cta-ct">
 	  <h2>¿Te interesa trabajar conmigo?</h2>
 	  <a href="/" class="rounded">Contactame</a>
 	</section>
     </main>
-    <footer class="flex flex-col justify-center center-verctically">
+    <footer>
       <ul class="footer-this">
 	<li>
 	  <a href="/">Jose Moreno</a>
