@@ -3,8 +3,9 @@ const mobileMenu = document.getElementById("mobileMenu");
 const mobileMenuBtn = document.getElementById("toogleMobileBtn");
 const mobileMenuImageaBtn = document.getElementById("menuBtnImage");
 const toogleModeBtn = document.getElementById("toogleDarkTheme");
-const themeImg = document.getElementById("themeImg");
 const theme = document.getElementById("theme");
+const darkIcon = document.getElementById("darkIcon");
+const lightIcon = document.getElementById("lightIcon");
 
 //functions 
 function toogleMobileMenu():void {
@@ -22,13 +23,15 @@ function toogleMobileMenu():void {
 }
 function toogleMode():void {
   if(theme?.classList.contains("light-on")) {
-    themeImg?.setAttribute("src", "src/assets/icons/moon-switch.svg");
     theme?.classList.remove("light-on");
     theme?.classList.add("dark-on");
+    darkIcon?.classList.remove("hidden-icon");
+    lightIcon?.classList.add("hidden-icon");
   } else {
-    themeImg?.setAttribute("src", "src/assets/icons/sun-switch.svg");
     theme?.classList.remove("dark-on");
     theme?.classList.add("light-on");
+    lightIcon?.classList.remove("hidden-icon");
+    darkIcon?.classList.add("hidden-icon");
   }
 }
 

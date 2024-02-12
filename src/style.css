@@ -83,7 +83,11 @@ b:not(.full-name){
 .rounded {
   border-radius: 0.3rem;
 }
+/* fix this media query */
 .hidden {
+  display: none;
+}
+.hidden-icon {
   display: none;
 }
 .showMenu {
@@ -106,7 +110,7 @@ b:not(.full-name){
   transform: translateX(0);
 }
 .dark-on {
-  transform: translateX(68%);
+  transform: translateX(80%);
 }
 .rounded-xl {
   border-radius: 0.6rem;
@@ -132,9 +136,13 @@ b:not(.full-name){
   display: flex;
   align-items: center;
   background-color: var(--light-box-image);
+  background-image: url(./assets/icons/sun-switch.svg), url(./assets/icons/moon-switch.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 10px center, 40px center;
   border-radius: 40px;
   height: 41px;
-  width: 65px;
+  width: 70px;
 }
 #toogleDarkTheme > div {
   display: flex;
