@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jose Moreno</title>
     <link rel="stylesheet" href="./src/normalize.css">
-    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" id="stylesheetMode" href="./src/light-theme.css">
   </head>
   <body>
     <header>
@@ -13,16 +13,16 @@
       <nav id="mobileMenu" class="hidden | rounded-xl">
 	<ul class="nav-link-list">
 	  <li>
-	    <a href="/">Inicio</a>
+	    <a href="/" id="homePage">Inicio</a>
 	  </li>
 	  <li>
-	    <a href="/">Proyectos</a>
+	    <a href="#projectSection">Proyectos</a>
 	  </li>
 	  <li>
-	    <a href="/">Sobre Mi</a>
+	    <a href="#aboutSection">Sobre Mi</a>
 	  </li>
 	  <li>
-	    <a href="/">Contacto</a>
+	    <a href="/contact.html" id="contactPage">Contacto</a>
 	  </li>
 	</ul><!--<img id="themeImg" src="./src/assets/icons/sun-switch.svg" width="20px" height="20px"/>-->
 	<button id="toogleDarkTheme">
@@ -43,7 +43,7 @@
       </button>
     </header>
     <main>
-      <section>
+      <section id="heroSection">
 	<div class="hero-image-ct">
 	  <!-- goes here --> 
 	</div>
@@ -78,7 +78,7 @@
 	  </ul>
 	</div>
       </section>
-      <section class="projects-ct">
+      <section class="projects-ct" id="projectSection">
 	<div class="project-box-ct">
 	  <div class="header-ct rounded">
 	    <h2>Proyectos</h2>
@@ -212,7 +212,7 @@
 	    </div>
 	  </div>
       </section>
-      <section class="about-ct"> 
+      <section class="about-ct" id="aboutSection"> 
 	<img src="./src/assets/images/mockup-portrait.svg"/>
 	<div class="about-box-description">
 	  <div class="header-ct rounded">
@@ -226,9 +226,9 @@
 	  </div>
 	</div>
       </section>
-      <section class="cta-ct">
+      <section class="cta-ct" id="ctaSection">
 	<h2>¿Te interesa trabajar conmigo?</h2>
-	<a href="/" class="rounded">Contactame</a>
+	<a href="/" class="rounded">¡Contactame!</a>
       </section>
     </main>
     <footer>
@@ -246,10 +246,10 @@
 	  <a href="/">Inicio</a>
 	</li>
 	<li>
-	  <a href="/">Proyecto</a>
+	  <a href="#projectSection">Proyecto</a>
 	</li>
 	<li>
-	  <a href="/">Sobre mi</a>
+	  <a href="#aboutSection">Sobre mi</a>
 	</li>
 	<li>
 	  <a href="/">Contacto</a>
