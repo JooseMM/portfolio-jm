@@ -1,15 +1,16 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jose Moreno</title>
     <link rel="stylesheet" href="./src/normalize.css">
-    <link rel="stylesheet" id="stylesheetMode" href="./src/style.css">
-    <title>Contacto</title>
+    <link rel="stylesheet" href="src/style.css">
   </head>
-  <body class="light-font-80 light-main-bg">
+  <body id="body" class="light-font-80 light-main-bg">
     <header>
-      <a href="/" class="logo">Jose M.</a> 
-      <nav id="mobileMenu" class="hidden | rounded-xl">
+      <a href="/" id="logo" class="logo light-font-100">Jose M.</a> 
+      <nav id="mobileMenu" class="light-alt-bg light-menu-border rounded-xl">
 	<ul class="nav-link-list">
 	  <li>
 	    <a href="/" id="homePage">Inicio</a>
@@ -39,9 +40,67 @@
       </nav>
       <button id="toogleMobileBtn" class="mobile-menu">
 	<img src="src/assets/icons/mobile-menu-btn.svg" id="menuBtnImage" class="menu-btn" height="25" width="35"/>
+	<img src="src/assets/icons/close-icon.svg" id="menuBtnImage" class="menu-btn hidden" height="25" width="35"/>
+	<img src="src/assets/icons/dark-mobile-menu-btn.svg" id="menuBtnImage" class="menu-btn hidden" height="25" width="35"/>
+	<img src="src/assets/icons/dark-close-icon.svg" id="menuBtnImage" class="menu-btn hidden" height="25" width="35"/>
       </button>
     </header>
-    <h1>Hello from contact!</h1>
+    <main>
+      <h1>Hello from contact</h1>
+    </main>
+    <footer class="light-dark-green">
+      <ul class="footer-this">
+	<li>
+	  <a href="/">Jose Moreno</a>
+	</li>
+	<li>Copyright 2024</li>
+      </ul>
+      <ul class="footer-pages">
+	<li>
+	  Secciones
+	</li>
+	<li>
+	  <a href="/">Inicio</a>
+	</li>
+	<li>
+	  <a href="#projectSection">Proyecto</a>
+	</li>
+	<li>
+	  <a href="#aboutSection">Sobre mi</a>
+	</li>
+	<li>
+	  <a href="/">Contacto</a>
+	</li>
+      </ul>
+      <div class="footer-info">
+	<ul class="footer-address">
+	  <li>
+	    Direcciones
+	  </li>
+	  <li> Santiago de Chile</li>
+	</ul>
+	<ul class="footer-social">
+	  <li>Redes Sociales</li>
+	  <div>
+	    <li>
+	      <a href="/">
+		<img src="./src/assets/icons/whatsapp-icon.svg" width="35" height="35"/>
+	      </a>
+	    </li>
+	    <li>
+	      <a href="/">
+		<img src="./src/assets/icons/ig-icon.svg" width="35" height="35"/>
+	      </a>
+	    </li>
+	    <li>
+	      <a href="/">
+		<img src="./src/assets/icons/github-icon.svg" width="35" height="35"/>
+	      </a>
+	    </li>
+	  </div>
+	</ul>
+      </div>
+    </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
