@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jose Moreno</title>
     <link rel="stylesheet" href="./src/normalize.css">
-    <link rel="stylesheet" id="stylesheetMode" href="./src/light-theme.css">
+    <link rel="stylesheet" href="src/style.css">
   </head>
-  <body>
+  <body id="body" class="light-font-80 light-main-bg">
     <header>
-      <a href="/" class="logo">Jose M.</a> 
-      <nav id="mobileMenu" class="hidden | rounded-xl">
+      <a href="/" id="logo" class="logo light-font-100">Jose M.</a> 
+      <nav id="mobileMenu" class="light-alt-bg light-menu-border rounded-xl">
 	<ul class="nav-link-list">
 	  <li>
 	    <a href="/" id="homePage">Inicio</a>
@@ -40,6 +40,9 @@
       </nav>
       <button id="toogleMobileBtn" class="mobile-menu">
 	<img src="src/assets/icons/mobile-menu-btn.svg" id="menuBtnImage" class="menu-btn" height="25" width="35"/>
+	<img src="src/assets/icons/close-icon.svg" id="menuBtnImage" class="menu-btn hidden" height="25" width="35"/>
+	<img src="src/assets/icons/dark-mobile-menu-btn.svg" id="menuBtnImage" class="menu-btn hidden" height="25" width="35"/>
+	<img src="src/assets/icons/dark-close-icon.svg" id="menuBtnImage" class="menu-btn hidden" height="25" width="35"/>
       </button>
     </header>
     <main>
@@ -48,159 +51,196 @@
 	  <!-- goes here --> 
 	</div>
 	<div class="hero-description"> 
-	  <h1>Soy <b>Jose</b>,<br/>Frontend Dev.</h1>
-	  <p>Hola! mi nombre es <b class="full-name">Jose Moreno</b>, un desarrollador web autodidacta, con bases fuertes en diseño de UI UX.</p>
+	  <h1 id="mainHeader" class="light-font-100">Soy <b class="highlight light-text-highlight">Jose</b>,<br/>Frontend Dev.</h1>
+	  <p>Hola! mi nombre es <b class="highlight light-text-highlight">Jose Moreno</b>, un desarrollador web autodidacta, con bases fuertes en diseño de UI UX.</p>
 	  <div class="hero-cta">
-	    <a href="/" class="main-cta-btn rounded">Contratame</a>
+	    <a href="/" id="heroBtn" class="main-cta-btn light-btn-bg rounded">Contratame</a>
 	    <div class="cta-decorator-ct flex">
-	      <a href="/">Proyectos<img id="decoratorCTA" src="/src/assets/icons/arrow-right.svg" width="20" height="20" class="cta-decorator"/></a>
+	      <a href="/" class='light-font-80' id="heroSecondBtn">Proyectos
+		<img id="light-decorator" class="cta-decorator" src="/src/assets/icons/arrow-right.svg" width="20" height="20" />
+		<img id="dark-decorator" class="hidden-icon cta-decorator" src="/src/assets/icons/dark-mode/arrow-cta.svg" width="20" height="20" class="cta-decorator"/>
+	      </a>
 	    </div>
 	  </div>
-	  <ul class="stack-ct-mobile">
+	  <ul class="stack stack-ct-mobile light-stack-bg">
 	    <li>
-	      <img class="tsIcon" src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
+	      <img class="light-icon" src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/Typescript.svg" width="40" height="40" alt=""/>
 	    </li>
 	    <li>
-	      <img class="exIcon" src="/src/assets/icons/express-logo.svg" width="40" alt=""/>
+	      <img class="light-icon" src="/src/assets/icons/express-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/Express-icon.svg" width="40" alt=""/>
 	    </li>
 	    <li>
-	      <img class="tailIcon" src="/src/assets/icons/tailwind-logo.svg" width="40" alt=""/>
+	      <img class="light-icon" src="/src/assets/icons/tailwind-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/tailwind-icon.svg" width="40" alt=""/>
 	    </li>
 	    <li>
-	      <img class="figmaIcon" src="/src/assets/icons/figma-logo.svg" width="40" alt=""/>
+	      <img class="light-icon" src="/src/assets/icons/figma-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/figma-icon.svg" width="40" alt=""/>
 	    </li>
 	    <li>
-	      <img class="angularIcon" src="/src/assets/icons/angular-logo.svg" width="40" alt=""/>
-	    </li>
-	    <li>
-	      <img class="reactIcon" src="/src/assets/icons/react-logo.svg" width="40" alt=""/>
+	      <img class="light-icon" src="/src/assets/icons/angular-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/angular-icon.svg" width="40" alt=""/>
 	    </li>
 	  </ul>
 	</div>
       </section>
-      <section class="projects-ct" id="projectSection">
+      <section class="light-alt-bg projects-ct" id="projectSection">
 	<div class="project-box-ct">
-	  <div class="header-ct rounded">
+	  <div class="header-ct rounded light-main-bg light-font-100">
 	    <h2>Proyectos</h2>
 	  </div>
-	  <div class="project-box rounded">
-	    <div class="box-image-ct rounded">
+	  <div class="project-box rounded light-main-bg">
+	    <div class="box-image-ct rounded light-md-teal-bg">
 	      <img src="src/assets/images/phone-mockup.svg" class="box-image-phone" width="80"/>
 	      <img src="src/assets/images/notebook-mockup.svg" class="box-image-pc" width="180"/>
 	    </div>
 	    <div class="box-description">
-	      <h4><b>Todo</b> App</h4>
+	      <h3><b class="light-text-highlight">Todo</b> App</h3>
 	      <p>Lorem ipsum dolor sit amet consectetur. Viverra leo erat vulputate ac nulla fermentum. </p>
-	      <ul class="stack-ct-mobile">
-		<li>
-		  <img class="tsIcon" src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
-		</li>
-		<li>
-		  <img class="exIcon" src="/src/assets/icons/express-logo.svg" width="40" alt=""/>
-		</li>
-		<li>
-		  <img class="tailIcon" src="/src/assets/icons/tailwind-logo.svg" width="40" alt=""/>
-		</li>
-		<li>
-		  <img class="figmaIcon" src="/src/assets/icons/figma-logo.svg" width="40" alt=""/>
-		</li>
-		<li>
-		  <img class="angularIcon" src="/src/assets/icons/angular-logo.svg" width="40" alt=""/>
-		</li>
+	      <ul class="stack stack-ct-mobile light-stack-bg">
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/Typescript.svg" width="40" height="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/express-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/Express-icon.svg" width="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/tailwind-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/tailwind-icon.svg" width="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/figma-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/figma-icon.svg" width="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/angular-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/angular-icon.svg" width="40" alt=""/>
+	    </li>
 	      </ul>
 	      <div class="box-btn flex center-vertically">
-		<a href="https://todo-app-jm.netlify.app/home" target="_blank" class="main-cta-btn rounded">Visitar</a>
-		<a href="" >Codigo</a>
+		<a href="https://todo-app-jm.netlify.app/home" target="_blank" class="main-cta-btn rounded light-btn-bg">Visitar</a>
+		<a href="" class="second-cta-btn light-code-btn" >Codigo</a>
 	      </div>
 	    </div>
-	    <ul class="stack-ct-xl">
-		  <img class="tsIcon" src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
-		</li>
-		<li>
-		  <img class="exIcon" src="/src/assets/icons/express-logo.svg" width="40" alt=""/>
-		</li>
-		<li>
-		  <img class="tailIcon" src="/src/assets/icons/tailwind-logo.svg" width="40" alt=""/>
-		</li>
-		<li>
-		  <img class="figmaIcon" src="/src/assets/icons/figma-logo.svg" width="40" alt=""/>
-		</li>
-		<li>
-		  <img class="angularIcon" src="/src/assets/icons/angular-logo.svg" width="40" alt=""/>
-		</li>
+	    <ul class="stack stack-ct-xl light-stack-bg">
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/Typescript.svg" width="40" height="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/express-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/Express-icon.svg" width="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/tailwind-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/tailwind-icon.svg" width="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/figma-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/figma-icon.svg" width="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/angular-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/angular-icon.svg" width="40" alt=""/>
+	    </li>
 	    </ul>
 	  </div>
-	  <div class="project-box rounded">
-	    <div class="box-image-ct rounded">
+	  <div class="project-box rounded light-main-bg">
+	    <div class="box-image-ct rounded light-md-teal-bg">
 	      <img src="src/assets/images/phone-mockup.svg" class="box-image-phone" width="80"/>
 	      <img src="src/assets/images/notebook-mockup.svg" class="box-image-pc" width="180"/>
 	    </div>
 	    <div class="box-description">
-	      <h4><b>Master</b> Chile</h4>
+	      <h3><b class="light-text-highlight">Master</b> Chile</h3>
 	      <p>Lorem ipsum dolor sit amet consectetur. Viverra leo erat vulputate ac nulla fermentum. </p>
-	      <ul class="stack-ct-mobile">
-		<li>
-		  <img class="tsIcon" src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
-		</li>
-		<li>
-		  <img class="tailIcon" src="/src/assets/icons/tailwind-logo.svg" width="40" alt=""/>
-		</li>
-		<li>
-		  <img class="figmaIcon" src="/src/assets/icons/figma-logo.svg" width="40" alt=""/>
-		</li>
-		<li>
-		  <img class="angularIcon" src="/src/assets/icons/angular-logo.svg" width="40" alt=""/>
-		</li>
+	      <ul class="stack stack-ct-mobile light-stack-bg">
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/Typescript.svg" width="40" height="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/express-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/Express-icon.svg" width="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/tailwind-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/tailwind-icon.svg" width="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/figma-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/figma-icon.svg" width="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/angular-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/angular-icon.svg" width="40" alt=""/>
+	    </li>
 	      </ul>
 	      <div class="box-btn flex center-vertically">
-		<a href="https://todo-app-jm.netlify.app/home" target="_blank" class="main-cta-btn rounded">Visitar</a>
-		<a href="" >Codigo</a>
+		<a href="https://todo-app-jm.netlify.app/home" target="_blank" class="main-cta-btn rounded light-btn-bg">Visitar</a>
+		<a href="" class="second-cta-btn light-code-btn" >Codigo</a>
 	      </div>
 	    </div>
-	    <ul class="stack-ct-xl">
-		<li>
-		  <img class="tsIcon" src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
-		</li>
-		<li>
-		  <img class="exIcon" src="/src/assets/icons/express-logo.svg" width="40" alt=""/>
-		</li>
-		<li>
-		  <img class="tailIcon" src="/src/assets/icons/tailwind-logo.svg" width="40" alt=""/>
-		</li>
-		<li>
-		  <img class="figmaIcon" src="/src/assets/icons/figma-logo.svg" width="40" alt=""/>
-		</li>
-		<li>
-		  <img class="angularIcon" src="/src/assets/icons/angular-logo.svg" width="40" alt=""/>
-		</li>
+	    <ul class="stack stack-ct-xl light-stack-bg">
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/Typescript.svg" width="40" height="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/express-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/Express-icon.svg" width="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/tailwind-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/tailwind-icon.svg" width="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/figma-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/figma-icon.svg" width="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/angular-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/angular-icon.svg" width="40" alt=""/>
+	    </li>
 	    </ul>
 	  </div>
-	  <div class="project-box rounded">
-	    <div class="box-image-ct rounded">
+	  <div class="project-box rounded light-main-bg">
+	    <div class="box-image-ct rounded light-md-teal-bg">
 	      <img src="src/assets/images/notebook-mockup.svg" class="box-image-pc" width="180"/>
 	      <img src="src/assets/images/phone-mockup.svg" class="box-image-phone" width="80"/>
 	    </div>
 	    <div class="box-description">
-	      <h4>Generador de <b>Boletas</b></h4>
+	      <h3>Generador de <b class="light-text-highlight">Boletas</b></h3>
 	      <p>Lorem ipsum dolor sit amet consectetur. Viverra leo erat vulputate ac nulla fermentum. 
 	      Lorem ipsum dolor sit amet consectetur. Viverra leo erat vulputate ac nulla fermentum. </p>
-	      <ul class="stack-ct-mobile">
-		<li>
-		  <img class="tsIcon" src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
-		</li>
-		<li>
-		  <img class="tailIcon" src="/src/assets/icons/tailwind-logo.svg" width="40" alt=""/>
-		</li>
-		<li>
-		  <img class="figmaIcon" src="/src/assets/icons/figma-logo.svg" width="40" alt=""/>
-		</li>
-		<li>
-		  <img class="reactIcon" src="/src/assets/icons/react-logo.svg" width="40" alt=""/>
-		</li>
+	      <ul class="stack stack-ct-mobile light-stack-bg">
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/Typescript.svg" width="40" height="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/express-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/Express-icon.svg" width="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/tailwind-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/tailwind-icon.svg" width="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/figma-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/figma-icon.svg" width="40" alt=""/>
+	    </li>
+	    <li>
+	      <img class="light-icon" src="/src/assets/icons/react-logo.svg" width="40" alt=""/>
+	      <img class="dark-icon hidden-icon" src="/src/assets/icons/dark-mode/react-icon.svg" width="40" alt=""/>
+	    </li>
 	      </ul>
 	      <div class="box-btn flex center-vertically">
-		<a href="https://todo-app-jm.netlify.app/home" target="_blank" class="main-cta-btn rounded">Visitar</a>
-		<a href="" >Codigo</a>
+		<a href="https://todo-app-jm.netlify.app/home" target="_blank" class="main-cta-btn rounded light-btn-bg">Visitar</a>
+		<a class="second-cta-btn light-code-btn" href="" >Codigo</a>
 	      </div>
 	    </div>
 	  </div>
@@ -208,23 +248,23 @@
       <section class="about-ct" id="aboutSection"> 
 	<img src="./src/assets/images/mockup-portrait.svg"/>
 	<div class="about-box-description">
-	  <div class="header-ct rounded">
+	  <div class="header-ct rounded light-alt-bg light-font-100">
 	    <h2>Sobre mi</h2>
 	  </div>
-	  <div class="rounded">
+	  <div id="aboutText" class="rounded light-alt-bg">
 	    <p>
-	    Lorem <b>Jose Moreno</b> sit amet consectetur. Libero mattis fermentum tortor a erat et. Et turpis ut cursus quam in porttitor nulla ullamcorper. A nibh curabitur eget ornare quis amet faucibus.<br><br>
+	    Lorem <b class="light-text-highlight">Jose Moreno</b> sit amet consectetur. Libero mattis fermentum tortor a erat et. Et turpis ut cursus quam in porttitor nulla ullamcorper. A nibh curabitur eget ornare quis amet faucibus.<br><br>
 	    Lorem ipsum dolor sit amet consectetur. Libero mattis fermentum tortor a erat et. Por aca te dejo varias de las cosas que me hacen disfrutar aun mas del desarrollo web.
 	    </p>
 	  </div>
 	</div>
       </section>
-      <section class="cta-ct" id="ctaSection">
+      <section class="cta-ct light-dark-teal-bg" id="ctaSection">
 	<h2>¿Te interesa trabajar conmigo?</h2>
-	<a href="/" class="rounded">¡Contactame!</a>
+	<a href="/contact.html" class="rounded light-main-bg light-font-100">¡Contactame!</a>
       </section>
     </main>
-    <footer>
+    <footer class="light-dark-green">
       <ul class="footer-this">
 	<li>
 	  <a href="/">Jose Moreno</a>
