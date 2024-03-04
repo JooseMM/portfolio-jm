@@ -1,20 +1,19 @@
 // UI variables
 const mobileMenuBtn = document.getElementById("toogleMobileBtn");
-var currentTheme = localStorage.getItem("currentTheme");
+var lightTheme = localStorage.getItem("lightTheme") == 'true' ? true : false;
 const decoratorCTA = document.getElementById("decoratorCTA");
 const toogleModeBtn = document.getElementById("toogleDarkTheme");
 const mobileMenu = document.getElementById("mobileMenu");
-var darkThemeOn = currentTheme || false;
-  const lightOpenBtn = document.getElementById("lightOpenMenu");
-  const lightCloseBtn = document.getElementById("lightCloseMenu");
-  const darkOpenBtn = document.getElementById("darkOpenMenu");
-  const darkCloseBtn = document.getElementById("darkCloseMenu");
+const lightOpenBtn = document.getElementById("lightOpenMenu");
+const lightCloseBtn = document.getElementById("lightCloseMenu");
+const darkOpenBtn = document.getElementById("darkOpenMenu");
+const darkCloseBtn = document.getElementById("darkCloseMenu");
 //functions 
-function changeIconTheme(darkTheme: boolean):void {
+function changeIconTheme(lighThemeOn: boolean):void {
   const lightIcons = document.getElementsByClassName("light-icon");
   const darkIcons = document.getElementsByClassName("dark-icon");
 
-  if(darkTheme) {
+  if(!lighThemeOn) {
     if(mobileMenu?.classList.contains("hidden")) {
       lightOpenBtn?.classList.add("hidden");
       darkOpenBtn?.classList.remove("hidden");
@@ -29,8 +28,7 @@ function changeIconTheme(darkTheme: boolean):void {
     for (var i = 0; i < darkIcons.length; i++) {
       darkIcons[i]?.classList.remove("hidden-icon");
     }
-
-    localStorage.setItem("currentTheme", "dark");
+    localStorage.setItem("lightTheme", "false");
   } else {
     if(mobileMenu?.classList.contains("hidden")) {
       lightOpenBtn?.classList.remove("hidden");
@@ -46,7 +44,7 @@ function changeIconTheme(darkTheme: boolean):void {
       lightIcons[i]?.classList.remove("hidden-icon");
     }
 
-    localStorage.setItem("currentTheme", "light");
+    localStorage.setItem("lightTheme", "true");
   }
 }
 
@@ -60,6 +58,7 @@ function toogleMode():void {
   const logo = document.getElementById("logo");
   //hero
   const heroBtn = document.getElementById("heroBtn");
+  const heroDecorator = document.getElementById("heroDecorator");
   const heroSecondBtn = document.getElementById("heroSecondBtn");
   const mainHeader = document.getElementById("mainHeader");
   const lightDecorator = document.getElementById("light-decorator");
@@ -75,13 +74,17 @@ function toogleMode():void {
   const projectBtn = document.getElementsByClassName("main-cta-btn");
   const projectSecondBtn = document.getElementsByClassName("second-cta-btn");
   const projectBgImg = document.getElementsByClassName("box-image-ct");
+  //about
+  const aboutDarkImg = document.getElementById("aboutDarkImage");
+  const aboutLightImg = document.getElementById("aboutLightImage");
 
   if(theme?.classList.contains("light-on")) {
-    darkThemeOn = true;
+    lightTheme = false;
     theme?.classList.remove("light-on");
     theme?.classList.add("dark-on");
     darkBtn?.classList.remove("hidden-icon");
     lightIcon?.classList.add("hidden-icon");
+    heroDecorator?.classList.replace("hero-light", "hero-dark");
     //change bg and font colors
     for(var i = 0; i < body.length; i ++){
       body[i].classList.replace("light-font-80", "dark-font-80");
@@ -126,13 +129,16 @@ function toogleMode():void {
     aboutText?.classList.replace("light-alt-bg", "dark-dark-teal-bg");
     mobileMenu?.classList.replace("light-alt-bg", "dark-alt-bg");
     mobileMenu?.classList.replace("light-menu-border", "dark-menu-border");
+    aboutDarkImg?.classList.remove("hidden");
+    aboutLightImg?.classList.add("hidden");
 
   } else {
-    darkThemeOn = false;
+    lightTheme = true;
     theme?.classList.remove("dark-on");
     theme?.classList.add("light-on");
     lightIcon?.classList.remove("hidden-icon");
     darkBtn?.classList.add("hidden-icon");
+    heroDecorator?.classList.replace("hero-dark", "hero-light");
     //change bg and font colors light theme
     for(var i = 0; i < body.length; i ++){
       body[i].classList.replace("dark-font-80", "light-font-80");
@@ -174,36 +180,42 @@ function toogleMode():void {
       secondHeader[i].classList.replace("dark-font-100","light-font-100");;
     }
     aboutText?.classList.replace("dark-dark-teal-bg", "light-alt-bg");
+    aboutLightImg?.classList.remove("hidden");
+    aboutDarkImg?.classList.add("hidden");
 
   }
-  changeIconTheme(darkThemeOn);
+  changeIconTheme(lightTheme);
 }
 
 function toogleMobileMenu():void {
+  console.log("click!");
   //dark mode toggle
-    if(mobileMenu?.classList.contains("hidden") && darkThemeOn) {
+    if(mobileMenu?.classList.contains("hidden") && !lightTheme) {
       darkOpenBtn?.classList.add("hidden");
       darkCloseBtn?.classList.remove("hidden");
       mobileMenu?.classList.replace("hidden", "showMenu");
       return
     } 
-    if(!mobileMenu?.classList.contains("hidden") && darkThemeOn) {
+    if(!mobileMenu?.classList.contains("hidden") && !lightTheme) {
       darkOpenBtn?.classList.remove("hidden");
       darkCloseBtn?.classList.add("hidden");
       mobileMenu?.classList.replace("showMenu", "hidden");
       return
     } 
   //light mode toggle
-    if(mobileMenu?.classList.contains("hidden") && !darkThemeOn) {
+    if(mobileMenu?.classList.contains("hidden") && lightTheme) {
       lightOpenBtn?.classList.add("hidden");
       lightCloseBtn?.classList.remove("hidden");
+      darkOpenBtn?.classList.add("hidden");
+      darkCloseBtn?.classList.add("hidden");
       mobileMenu?.classList.replace("hidden", "showMenu");
       return
     } 
-    if(!mobileMenu?.classList.contains("hidden") && !darkThemeOn) {
+    if(!mobileMenu?.classList.contains("hidden") && lightTheme) {
       lightOpenBtn?.classList.remove("hidden");
       lightCloseBtn?.classList.add("hidden");
       darkCloseBtn?.classList.add("hidden");
+      darkOpenBtn?.classList.add("hidden");
       mobileMenu?.classList.replace("showMenu", "hidden");
       return
     } 
@@ -237,6 +249,6 @@ window.addEventListener("resize", checkSize);
 currentUrlChecker();
 checkSize();
 
-if(currentTheme === "dark") {
+if(!lightTheme) {
   toogleMode();
 }

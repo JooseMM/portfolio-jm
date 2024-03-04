@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jose Moreno</title>
-    <link rel="stylesheet" href="./src/normalize.css">
+    <link rel="stylesheet" href="src/normalize.css">
     <link rel="stylesheet" href="src/style.css">
   </head>
   <body id="body" class="light-font-80 light-main-bg">
@@ -47,8 +47,8 @@
     </header>
     <main>
       <section id="heroSection">
-	<div class="hero-image-ct">
-	  <!-- goes here --> 
+	<div class="hero-image-ct ">
+	  <img src="./src/assets/images/hero-image.png" alt="hero image" width="400" />
 	</div>
 	<div class="hero-description"> 
 	  <h1 id="mainHeader" class="light-font-100">Soy <b class="highlight light-text-highlight">Jose</b>,<br/>Frontend Dev.</h1>
@@ -150,9 +150,9 @@
 	    </ul>
 	  </div>
 	  <div class="project-box rounded light-main-bg">
-	    <div class="box-image-ct rounded light-md-teal-bg">
-	      <img src="src/assets/images/phone-mockup.svg" class="box-image-phone" width="80"/>
-	      <img src="src/assets/images/notebook-mockup.svg" class="box-image-pc" width="180"/>
+	    <div class="box-image-ct rounded light-md-teal-bg in-progress">
+	      <img src="src/assets/images/master-mobile.svg" class="box-image-phone" width="80"/>
+	      <img src="src/assets/images/master-laptop.svg" class="box-image-pc" width="180"/>
 	    </div>
 	    <div class="box-description">
 	      <h3><b class="light-text-highlight">Master</b> Chile</h3>
@@ -180,8 +180,8 @@
 	    </li>
 	      </ul>
 	      <div class="box-btn flex center-vertically">
-		<a href="https://todo-app-jm.netlify.app/home" target="_blank" class="main-cta-btn rounded light-btn-bg">Visitar</a>
-		<a href="" class="second-cta-btn light-code-btn" >Codigo</a>
+		<a href="/" style="opacity: 0.4" class="main-cta-btn rounded light-btn-bg">Visitar</a>
+		<a href="https://github.com/JooseMM/master-chile" target="_blank" class="second-cta-btn light-code-btn" >Codigo</a>
 	      </div>
 	    </div>
 	    <ul class="stack stack-ct-xl light-stack-bg">
@@ -209,13 +209,13 @@
 	  </div>
 	  <div class="project-box rounded light-main-bg">
 	    <div class="box-image-ct rounded light-md-teal-bg">
-	      <img src="src/assets/images/notebook-mockup.svg" class="box-image-pc" width="180"/>
-	      <img src="src/assets/images/phone-mockup.svg" class="box-image-phone" width="80"/>
+	      <img src="src/assets/images/account-PDF-mobile.svg" class="box-image-phone" width="80"/>
+	      <img src="src/assets/images/account-PDF.svg" class="box-image-pc" width="180"/>
 	    </div>
 	    <div class="box-description">
 	      <h3>Generador de <b class="light-text-highlight">Boletas</b></h3>
 	      <p>Lorem ipsum dolor sit amet consectetur. Viverra leo erat vulputate ac nulla fermentum. 
-	      Lorem ipsum dolor sit amet consectetur. Viverra leo erat vulputate ac nulla fermentum. </p>
+	      </p>
 	      <ul class="stack stack-ct-mobile light-stack-bg">
 	    <li>
 	      <img class="light-icon" src="/src/assets/icons/Typescript-logo.svg" width="40" height="40" alt=""/>
@@ -246,14 +246,15 @@
 	  </div>
       </section>
       <section class="about-ct" id="aboutSection"> 
-	<img src="./src/assets/images/mockup-portrait.svg"/>
+	<img src="./src/assets/images/about-image.png" width="400" class="about-portrait" alt="retrato" id="aboutLightImage"/>
+	<img src="./src/assets/images/about-image-dark.png" width="400" class="hidden about-portrait" alt="retrato" id="aboutDarkImage"/>
 	<div class="about-box-description">
 	  <div class="header-ct rounded light-alt-bg light-font-100">
 	    <h2>Sobre mi</h2>
 	  </div>
 	  <div id="aboutText" class="rounded light-alt-bg">
 	    <p>
-	    Lorem <b class="light-text-highlight">Jose Moreno</b> sit amet consectetur. Libero mattis fermentum tortor a erat et. Et turpis ut cursus quam in porttitor nulla ullamcorper. A nibh curabitur eget ornare quis amet faucibus.<br><br>
+	    Lorem <b>Jose Moreno</b> sit amet consectetur. Libero mattis fermentum tortor a erat et. Et turpis ut cursus quam in porttitor nulla ullamcorper. A nibh curabitur eget ornare quis amet faucibus.<br><br>
 	    Lorem ipsum dolor sit amet consectetur. Libero mattis fermentum tortor a erat et. Por aca te dejo varias de las cosas que me hacen disfrutar aun mas del desarrollo web.
 	    </p>
 	  </div>

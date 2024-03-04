@@ -16,10 +16,10 @@
 	    <a href="/" id="homePage">Inicio</a>
 	  </li>
 	  <li>
-	    <a href="/#projectSection">Proyectos</a>
+	    <a href="#projectSection">Proyectos</a>
 	  </li>
 	  <li>
-	    <a href="/#aboutSection">Sobre Mi</a>
+	    <a href="#aboutSection">Sobre Mi</a>
 	  </li>
 	  <li>
 	    <a href="/contact.html" id="contactPage">Contacto</a>
@@ -39,14 +39,44 @@
 	</button>
       </nav>
       <button id="toogleMobileBtn" class="mobile-menu">
-	<img src="src/assets/icons/mobile-menu-btn.svg" id="menuBtnImage" class="menu-btn" height="25" width="35"/>
-	<img src="src/assets/icons/close-icon.svg" id="menuBtnImage" class="menu-btn hidden" height="25" width="35"/>
-	<img src="src/assets/icons/dark-mobile-menu-btn.svg" id="menuBtnImage" class="menu-btn hidden" height="25" width="35"/>
-	<img src="src/assets/icons/dark-close-icon.svg" id="menuBtnImage" class="menu-btn hidden" height="25" width="35"/>
+	<img src="src/assets/icons/mobile-menu-btn.svg" id="lightOpenMenu" class="menu-btn" height="25" width="35"/>
+	<img src="src/assets/icons/close-icon.svg" id="lightCloseMenu" class="menu-btn hidden" height="25" width="35"/>
+	<img src="src/assets/icons/dark-mode/mobile-btn.svg" id="darkOpenMenu" class="menu-btn hidden" height="25" width="35"/>
+	<img src="src/assets/icons/dark-mode/close-btn.svg" id="darkCloseMenu" class="menu-btn hidden" height="25" width="35"/>
       </button>
     </header>
-    <main>
-      <h1>Hello from contact</h1>
+    <main class="contact-section">
+      <img src="src/assets/images/about-image.png" id="aboutLightImage"/>
+      <img src="src/assets/images/about-image-dark.png" class="hidden" id="aboutDarkImage"/>
+      <h1>¡Pongamonos en <b class="light-text-highlight">contacto!</b></h1>
+	<p>Hola! mi nombre es <b class="">Jose Moreno</b>, un desarrollador web autodidacta, con bases fuertes en diseño de UI UX.
+  un desarrollador web autodidacta </p>
+	<div class="contact-grid">
+	  <a href="mailto:jamm.webdev@gmail.com" target="_blank" class="contact-link-ct">
+	    <div >
+	      <img src="src/assets/images/mail-icon.png" width="40" />
+	    </div>
+	    jamm.webdev@gmail.com</a>
+	  </a>
+	  <a href="callto:+56932339545" class="contact-link-ct">
+	    <div >
+	      <img src="src/assets/images/whatsapp-icon.png" width="40" />
+	    </div>
+	     +56 9 3233 9545
+	  </a>
+	  <a href="https://github.com/JooseMM" target="_blank" class="contact-link-ct">
+	    <div >
+	      <img src="src/assets/images/github-icon.png" width="40" />
+	    </div>
+	      github.com/JooseMM
+	  </a>
+	  <a href="/" target="_blank" class="contact-link-ct">
+	    <div >
+	      <img src="src/assets/images/instagram-icon.png" width="40" />
+	    </div>
+	      Oppss! En progreso
+	  </a>
+	</div>
     </main>
     <footer class="light-dark-green">
       <ul class="footer-this">
