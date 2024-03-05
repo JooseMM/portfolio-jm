@@ -398,7 +398,7 @@ b {
     opacity: 0.6;
  }
  .in-progress:before {
-   content: 'En Progreso!';
+   content: '!EN PROGRESO!';
    position: absolute;
    right: 50%;
    top: 50%;
