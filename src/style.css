@@ -549,6 +549,9 @@ b {
   width: 80%;
   max-width: 400px;
 }
+.project-box {
+    padding-bottom:1.5rem;
+  }
 
 @media only screen and (min-width: 350px) {
   .contact-link-ct {
@@ -618,6 +621,7 @@ b {
   .cta-ct > h2 {
     font-size: 2.5rem;
   }
+  
   
 }
 
@@ -759,9 +763,14 @@ b {
     justify-content: center;
     padding-block: 0rem;
   }
-   .contact-grid {
+  .project-box {
+    padding-bottom:1rem;
+  }
+  .contact-grid {
+    margin-top: 1rem;
+    width: 80%;
     max-width: none;
-    }
+  }
   .hero-image-ct {
     order: 1;
     margin-left: 5vw;
@@ -906,7 +915,10 @@ b {
   }
   /* projects wide */
   .project-box:last-child .stack-ct-mobile {
-    width: 95%;
+    width: fit-content;
+  }
+  .project-box:last-child {
+    padding-bottom: 1.5rem;
   }
   /* about */ 
   .about-ct {
