@@ -473,6 +473,12 @@ b {
   justify-content: center;
   align-items: center;
 }
+.about-ct p {
+  font-size: 1.1rem;
+}
+.about-box-description p:last-child {
+  margin-top: 1rem;
+}
 .about-box-description > div:last-child ul li, .about-box-description > div:last-child ul li a {
   display: flex;
   justify-content: center;
@@ -480,9 +486,6 @@ b {
 }
 .about-ct .header-ct {
   padding-inline: 3.5rem;
-}
-.about-ct p {
-  font-size: 1.2rem;
 }
 .about-box-description {
   display: flex;
@@ -744,9 +747,6 @@ b {
     margin-top: 0rem;
     margin-right: 2rem;
   }
-  .about-ct p {
-    font-size: 1rem;
-  }
   .about-box-description {
     margin: 0;
   }
@@ -765,6 +765,9 @@ b {
   }
   .project-box {
     padding-bottom:1rem;
+  }
+  .about-ct p {
+    font-size: 1.2rem;
   }
   .contact-grid {
     margin-top: 1rem;
