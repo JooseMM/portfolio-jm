@@ -412,6 +412,7 @@ b {
   overflow: hidden;
   display: flex;
   justify-content: center;
+  padding-block: 1rem;
  }
  .box-image-phone {
    transform: translateY(15%);
@@ -918,6 +919,9 @@ b {
   }
   /* projects wide */
   .project-box:last-child .stack-ct-mobile {
+    width: 95%;
+  }
+  .stack-ct-xl {
     width: fit-content;
   }
   .project-box:last-child {
@@ -1158,7 +1162,7 @@ b {
   .hero-description h1 {
     font-size: 3.8rem;
   }
-  .hero-description p {
+  .hero-descriptio p {
     font-size: 1.2rem;
   }
   .hero-description a {
