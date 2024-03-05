@@ -332,7 +332,7 @@ b {
  .stack-ct-xl, .stack-ct-mobile {
   display: flex;
   padding: 0.7rem 1rem;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
@@ -764,6 +764,9 @@ b {
     justify-content: center;
     padding-block: 0rem;
   }
+  .project-box:nth-child(3) .stack-ct-xl li:not(:last-child) {
+    margin-bottom: 1rem; 
+  }
   .project-box {
     padding-bottom:1rem;
   }
@@ -1008,7 +1011,7 @@ b {
     justify-content: center;
   }
   .project-box-ct .project-box:last-child .stack-ct-mobile li:not(:last-child, :nth-child(3)) {
-    margin-right: 1rem;
+    margin-right: 1.2rem;
   }
   .projects-ct .stack-ct-mobile {
     display: none;
@@ -1178,5 +1181,8 @@ b {
   }
   .hero-cta > a:not(:last-child) {
     margin: 0;
+  }
+  .contact-grid a {
+    font-size: 1.5rem;
   }
 }
