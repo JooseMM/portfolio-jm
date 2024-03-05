@@ -667,6 +667,12 @@ b {
   .projects-ct .box-description {
     align-items: start;
   }
+  .hero-description p {
+    max-width: 40ch;
+  }
+  .hero-description h1 {
+    font-size: 2.8rem;
+  }
   .box-image-ct {
     height: 263.58px;
     flex-direction: column;
@@ -912,7 +918,7 @@ b {
   }
   .hero-description p {
     font-size: 1rem;
-    max-width: 30ch;
+    max-width: 35ch;
   }
   .hero-description a {
     font-size: 1.1rem;
@@ -979,7 +985,7 @@ b {
     align-items: baseline;
   }
   .hero-image-ct img {
-    width: 430px;
+    width: 450px;
   }
   .projects-ct {
     padding-bottom: 5rem;
