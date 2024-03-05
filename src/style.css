@@ -554,7 +554,8 @@ b {
     justify-items: center;
   }
   .contact-link-ct {
-    padding: 1.2rem 1.6rem;
+    padding-block: 1.2rem; 
+    width: 100%;
     font-size: 1.3rem;
   }
   .contact-section p {
@@ -582,7 +583,7 @@ b {
     margin-right: 0;
   }
   .box-btn > a:last-child {
-    padding: 0.95rem 4.5vw;
+    padding: 0.95rem 1.5rem;
   }
   .cta-ct {
     display: flex;
@@ -615,10 +616,16 @@ b {
 @media only screen and (min-width: 550px) {
   .contact-link-ct {
     font-size: 1.3rem;
-    padding: 1rem 2rem;
+  }
+  .contact-grid {
+    width: 90%;
+    max-width: 600px;
   }
   .contact-section > img {
     max-width: 400px;
+  }
+  .contact-section p {
+    padding-inline: 1rem;
   }
 }
 @media only screen and (min-width: 700px) {
@@ -694,6 +701,7 @@ b {
   }
   .box-btn > a:last-child {
     margin-left: 0.5rem;
+    padding: 0.85rem 1.3rem;
   }
   .about-box-description {
     margin-top: 2rem;
@@ -737,6 +745,9 @@ b {
     justify-content: center;
     padding-block: 0rem;
   }
+   .contact-grid {
+    max-width: none;
+    }
   .hero-image-ct {
     order: 1;
     margin-left: 5vw;
