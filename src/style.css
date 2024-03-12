@@ -357,7 +357,7 @@ b {
  }
  /* projects */
  .projects-ct {
-   padding-inline: 5vw;
+   padding-inline: 1rem;
    margin-top: 3rem;
    padding-block: 3rem;
  }
@@ -424,7 +424,6 @@ b {
    flex-direction: column;
    align-items: center;
    margin-top: 1rem;
-   padding-inline: 1.5vw;
  }
  .project-box-ct .stack-ct-xl  {
    margin-top: 1rem;
@@ -432,24 +431,27 @@ b {
  }
  .project-box-ct .stack-ct-mobile {
    margin-top: 1rem;
-   width: 95%;
+   width: 100%;
  }
  .project-box-ct .stack-ct-mobile > li, .project-box-ct .stack-ct-xl > li  {
    width: 35px;
    height: 35px;
  }
  .box-btn {
-   margin-top: 1rem;
-   margin-bottom: 1rem;
+   display: flex;
+   width: 100%;
  }
  .box-btn > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.2rem;
-  padding: 1rem 6vw;
+  padding-block: 1rem; 
+  width: 48%;
  }
  .box-btn > a:last-child {
    margin-left: 0.5rem;
    border-radius: 0.3rem;
-   padding: 0.95rem 5vw;
  }
  .light-code-btn {
    border: 1px solid var(--grayish-blue);
@@ -554,20 +556,11 @@ b {
   width: 80%;
   max-width: 400px;
 }
-.project-box {
-    padding-bottom:1.5rem;
-  }
 
 @media only screen and (min-width: 350px) {
   .contact-link-ct {
     padding: 1rem 1.2rem;
   }
- .box-btn > a {
-  padding: 1rem 9vw;
- }
- .box-btn > a:last-child {
-   padding: 0.95rem 8vw;
- }
 }
 @media only screen and (min-width: 400px) {
   .box-btn {
@@ -593,13 +586,9 @@ b {
  }
   .box-btn > a {
     font-size: 1.2rem;
-    padding: 1rem 2.5rem;
   }
   .about-portrait {
     margin-right: 0;
-  }
-  .box-btn > a:last-child {
-    padding: 0.95rem 1.5rem;
   }
   .cta-ct {
     display: flex;
@@ -613,9 +602,6 @@ b {
   }
   .box-image-phone {
     margin-right: 0.5rem;
-  }
-  .project-box {
-    padding-bottom: 1.5rem;
   }
   .box-description p {
     max-width: 90%;
@@ -651,7 +637,7 @@ b {
     padding-inline: 1rem;
   }
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 710px) {
   .project-box {
     display: flex;
     max-width: 700px;
@@ -695,12 +681,10 @@ b {
     margin: 0;
     width: 55%;
     justify-content: center;
+    padding-inline: 0.8rem;
   }
   .box-description p {
     font-size: 1.1rem;
-  }
-  .project-box:last-child .box-description > p {
-    font-size: 0.93rem;
   }
   .box-description > h3 {
     font-size: 1.7rem;
@@ -709,7 +693,7 @@ b {
     order: 4;
     width: 100%;
     margin: 0;
-    margin-top: 2rem;
+    margin-top: 1rem;
     justify-content: center;
   }
   .stack-ct-mobile li:not(:last-child) {
@@ -720,17 +704,10 @@ b {
   }
   .project-box .box-btn {
     margin: 0;
-    margin-top: 1.5rem;
-  }
-  .box-btn {
-    margin-top: 0.9rem;
-  }
-  .box-btn > a:first-child {
-    padding: 0.9rem 2.5rem;
+    margin-top: 0.5rem;
   }
   .box-btn > a:last-child {
     margin-left: 0.5rem;
-    padding: 0.85rem 1.3rem;
   }
   .about-box-description {
     margin-top: 2rem;
@@ -773,9 +750,6 @@ b {
   }
   .project-box:nth-child(3) .stack-ct-xl li:not(:last-child) {
     margin-bottom: 1rem; 
-  }
-  .project-box {
-    padding-bottom:1rem;
   }
   .about-ct p {
     font-size: 1.2rem;
@@ -928,19 +902,10 @@ b {
     margin-top: 1.5rem;
   }
   /* projects wide */
-  .project-box:last-child .stack-ct-mobile {
-    width: 95%;
-  }
   .stack-ct-xl {
     width: fit-content;
   }
-  .project-box:last-child {
-    padding-bottom: 1.5rem;
-  }
-  /* about */ 
-  .about-ct {
-    padding-block: 3rem;
-  }
+   /* about */ 
   .about-box-description {
     padding-block: 0;
     align-items: center;
@@ -972,10 +937,6 @@ b {
   footer > ul:not(:last-child) {
     margin-right: 5rem;
   }
-  .box-btn > a:last-child {
-    padding: 0.95rem 2rem;
-  }
-
 } 
 @media only screen and (min-width: 1320px) {
 
@@ -1044,7 +1005,8 @@ b {
   }
   .project-box:last-child .box-image-ct {
     width: 100%;
-    margin-right: 0;
+    margin: 0;
+    margin-bottom: 1rem;
     flex-direction: row;
   }
   .project-box:last-child .box-image-phone {
@@ -1072,14 +1034,11 @@ b {
   }
   .project-box:last-child .box-description .box-btn {
     order: 4;
-    margin-top: 2rem;;
+    margin-top: 1rem;;
   }
   .project-box:last-child .stack-ct-xl li:not(:last-child) {
     margin:0;
     margin-right: 1rem;
-  }
-  .project-box:last-child h3 {
-    margin-top: 0.8rem;
   }
   .project-box:last-child p {
     max-width: none;
@@ -1127,10 +1086,10 @@ b {
   }
   .box-description:last-child {
     padding-inline: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
   .box-btn > a:last-child {
-    padding: 0.8rem 1.8rem;
+    padding: 0.8rem;
   }
   .cta-ct > a {
     transition: ease-in-out 300ms;
