@@ -44,9 +44,9 @@ template.innerHTML = `
 			background-color: #639999;
 			background-image: url(./src/assets/icons/sun-switch.svg), url(./src/assets/icons/moon-switch.svg);
 			background-repeat: no-repeat;
-			padding: 0.2rem; 
-			width: 4rem;
-			background-position: 10px center, 38px center;
+			padding: 4px 4px;
+			width: 70px;
+			background-position: 8px center, 38px center;
 			border-radius: 1.5rem;
 		}
 		.mode  > div {
@@ -55,13 +55,13 @@ template.innerHTML = `
 			align-items: center;
 			border-radius: 100%;
 			padding: 0.1rem;
-			width: 1.8rem;
-			height: 1.8rem;
+			width: 30px;
+			height: 30px;
 			background-color: #004040;
 			transition:ease-in-out 300ms;
 		}
 		.dark-mode {
-			transform: translateX(95%);
+			transform: translateX(32px);
 		}
 		.hide-menu {
 			display: none;
