@@ -1,3 +1,3 @@
-import Navbar from "./components/navbar";
+import Navbar from "./components/navbar/navbar";
 
 customElements.define("navbar-section", Navbar);
