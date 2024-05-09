@@ -1,3 +1,4 @@
+import normalize from "../../normalize";
 import { lightOnIcon, darkOnIcon, lightBurguerIcon, lightCloseIcon, darkBurguerIcon, darkCloseIcon } from "./icons";
 
 const template = document.createElement("template");
@@ -116,6 +117,9 @@ template.innerHTML = `
 			#menuBtn {
 				display: none;
 			}
+			.menu-dark-bg {
+				background-color: inherit;
+			}
 		}
 
 	</style>
@@ -158,11 +162,11 @@ export default class Navbar extends HTMLElement {
 
 	connectedCallback() {
 		
-		const link = document.createElement("link"); 
-		link.rel = "stylesheet";
-		link.href = "./src/normalize.css";
-		this.shadowRoot?.appendChild(link);
 		
+		const resetCSS = new CSSStyleSheet();
+		resetCSS.replaceSync(normalize);
+		this.shadowRoot?.adoptedStyleSheets.push(resetCSS);
+
 		this.shadowRoot?.querySelector("#menuBtn")
 			?.addEventListener("click", () => {
 				const toggledValue = this.getAttribute("visible") == "true" ? "false" : "true";
@@ -205,26 +209,18 @@ export default class Navbar extends HTMLElement {
 		const navbar = this.shadowRoot?.querySelector("nav");
 
 		if(darkTheme) {
-			if(visible) {
+			if(visible)
 				menuIcon?.replaceChildren(darkCloseIcon.content.cloneNode(true));
-				console.log("open dark");
-			}
-			else {
+			else
 				menuIcon?.replaceChildren(darkBurguerIcon.content.cloneNode(true));
-				console.log("close dark");
-			}
 
 			themeIcon?.replaceChildren(darkOnIcon.content.cloneNode(true));
 		}
 		else {
-			if(visible) {
+			if(visible)
 				menuIcon?.replaceChildren(lightCloseIcon.content.cloneNode(true));
-				console.log("open light");
-			}
-			else {
+			else
 				menuIcon?.replaceChildren(lightBurguerIcon.content.cloneNode(true));
-				console.log("close light");
-			}
 
 			themeIcon?.replaceChildren(lightOnIcon.content.cloneNode(true));
 		}
@@ -236,8 +232,8 @@ export default class Navbar extends HTMLElement {
 
 	setExternalThemes(darkTheme: boolean) {
 		const body = document.querySelector("body");
-		/*
 		const hero = document.querySelector("hero-section");
+		/*
 		const projects = document.querySelector("projects-section");
 		const about = document.querySelector("about-section");
 		const cta = document.querySelector("cta-section");
@@ -246,6 +242,7 @@ export default class Navbar extends HTMLElement {
 		*/
 
 		body?.classList.toggle("dark-mode", darkTheme);
+		hero?.setAttribute("dark", String(darkTheme));
 	}
 
 }
