@@ -1,4 +1,5 @@
-const resetCSS = `@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+const resetCSS = `
 
 html {
   line-height: 1.15; /* 1 */

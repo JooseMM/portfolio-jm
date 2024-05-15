@@ -24,6 +24,10 @@ template.innerHTML = `
 		.image-container {
 			margin-top: 1rem;
 		}
+		.description-container {
+			margin-top: 1rem;
+			width: 300px;
+		}
 		.description-container h1 {
 			font-size: 2.5rem;
 			font-weight: 400;
@@ -47,29 +51,95 @@ template.innerHTML = `
 			margin-top: 1.3rem;
 			align-items: baseline;
 			font-weight: 500;
+			font-size: 1rem;
 		}
 		.cta-button {
 			margin-right: 1.2rem;
 			color: white;
-			font-size: 1rem;
 			padding: 0.8rem 1.5rem;
 			border-radius: 5px;
 			letter-spacing: 1px;
 			background-color: #006666;
 		}
-		.cta-container div {
+		.container-decorator {
 			opacity: 0.9;
 			position: relative;
 		}
 		.dark-button {
 			background-color: #E0A029;
 		}
+		.skills {
+			margin-top: 2rem;
+			width: 290px;
+		}
 		span {
 			position: absolute;
 			right: 0;
-			bottom: -80%;
+			top: 100%;
 		}
-	
+		.image-container img {
+			width: 280px;
+		}
+		@media only screen and (min-width: 380px) {
+			.image-container img {
+				width: 320px;
+			}
+			.skills {
+				width: 350px;
+			}
+		}
+		@media only screen and (min-width: 700px) {
+			.description-container {
+				font-size: 1.2rem;
+				width: 400px;
+			}
+			.description-container h1 {
+				font-size: 3rem;
+			}
+			.image-container img {
+				width: 350px;
+			}	
+			.cta-container {
+				font-size: 1.3rem;
+			}
+			span {
+				top: 80%;
+			}
+		}
+		@media only screen and (min-width: 1000px) {
+			section {
+				flex-direction: row-reverse;
+				margin-inline: 5vw;
+			}
+			.description-container {
+				margin-top: 0;
+				margin-right: 0vw;
+				align-items: start;
+				font-size: 1.2rem;
+				text-align: left;
+				width: 450px;
+			}
+			.description-container p {
+				width: 350px;
+			}
+			.description-container h1 {
+				font-size: 3.5rem;
+			}
+			.image-container img {
+				width: 480px;
+			}
+			span {
+				top: 70%;
+			}
+		}
+		@media only screen and (min-width: 1440px) {
+			.image-container img {
+				width: 550px;
+			}
+			.description-container {
+				margin-right: 5vw;
+			}
+		}
 
 	</style>
 	<section>
@@ -81,12 +151,23 @@ template.innerHTML = `
 			<p>¡Hola! Mi nombre es <b id="hParagraph">Jose Moreno</b>, un desarrollador web autodidacta, con bases fuertes en diseño de UI UX.</p>
 			<div class="cta-container">
 				<a class="cta-button " href="#" >Contratame</a>
-				<div>
+				<div class="container-decorator">
 					<a href="#">Proyectos</a>
 					<span id="decorator"></span>
-				<div>
+				</div>
 			</div>
-
+				<skill-bar 
+					class="skills"
+					typescript="true"
+					figma="true"
+					react="true"
+					express="true"
+					angular="true"
+					tailwind="true"
+					dark="false"
+					vertical="false"
+				>
+				</skill-bar>
 		</div>
 	</section>
 `;

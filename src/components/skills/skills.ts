@@ -12,7 +12,7 @@ template.innerHTML = `
 			background-color: #BECCCC;
 			border-radius: 10px;
 			height: 100%;
-			padding: 0.5rem 0.8rem;
+			padding: 0.8rem 1.2rem;
 		}
 		
 		.vertical {
@@ -21,6 +21,9 @@ template.innerHTML = `
 		}
 		.dark {
 			background-color: #4C8080;
+		}
+		.fix-figma {
+			margin-inline: 0.1rem !important;
 		}
 
 	</style>
@@ -61,26 +64,31 @@ export default class Skills extends HTMLElement {
 	setIcon(skillName: string, darkTheme: boolean) {
 		const list = this.shadowRoot?.querySelector("ul");
 		var icon: DocumentFragment;
+		const listItem = document.createElement("li");
+		const vertical = this.getAttribute("vertical") == "true" ? true : false;
 
 		if(darkTheme) 
 			icon = icons.get("dark_" + skillName)?.content!;
 		else
 			icon = icons.get("light_" + skillName)?.content!;
 
-		list?.appendChild(icon!.cloneNode(true));
+		if(skillName === "figma" && !vertical)
+			listItem.classList.add("fix-figma");
+
+		listItem.replaceChildren(icon.cloneNode(true));
+		list?.appendChild(listItem!.cloneNode(true));
 	}
 	setInternalTheme(darkTheme: boolean):void {
 		const resetNode = document.createElement("ul");
-		const list = this.shadowRoot?.querySelector("ul");
+		const oldList = this.shadowRoot?.querySelector("ul");
 		const vertical = this.getAttribute("vertical") == "true" ? true : false;
 		const skills = this.checkSkills();
 
 		resetNode.classList.toggle("dark", darkTheme);
 		resetNode.classList.toggle("vertical", vertical);
 		resetNode.classList.add("list");
-
 		resetNode.setAttribute("vertical", vertical ? "true" : "false" );
-		list?.replaceWith(resetNode);
+		oldList?.replaceWith(resetNode);
 		skills.forEach((skillName) => this.setIcon(skillName, darkTheme));
 	}
 	
