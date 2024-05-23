@@ -234,6 +234,7 @@ export default class Navbar extends HTMLElement {
 		const body = document.querySelector("body");
 		const hero = document.querySelector("hero-section");
 		const heroSkills = hero?.shadowRoot?.querySelector("skill-bar");
+		const about = document.querySelector("about-section");
 		
 		/*
 		const projects = document.querySelector("projects-section");
@@ -246,6 +247,7 @@ export default class Navbar extends HTMLElement {
 		body?.classList.toggle("dark-mode", darkTheme);
 		hero?.setAttribute("dark", String(darkTheme));
 		heroSkills?.setAttribute("dark", String(darkTheme));
+		about?.setAttribute("dark", String(darkTheme));
 	}
 
 }

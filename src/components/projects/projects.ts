@@ -44,6 +44,6 @@ export default class Projects extends HTMLElement {
 
 	connectedCallback() {
 	}
-	attributeChangedCallback(name: string, _oldValue: string, newValue: string) {
+	attributeChangedCallback(_name: string, _oldValue: string, _newValue: string) {
 	}
 }
