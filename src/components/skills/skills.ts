@@ -12,7 +12,10 @@ template.innerHTML = `
 			background-color: #BECCCC;
 			border-radius: 10px;
 			height: 100%;
-			padding: 0.8rem 1.2rem;
+			padding-inline: 1.2rem;
+			padding-top: 0.8rem;
+			padding-bottom: 0.5rem;
+		}
 		}
 		
 		.vertical {
@@ -23,7 +26,11 @@ template.innerHTML = `
 			background-color: #4C8080;
 		}
 		.fix-figma {
-			margin-inline: 0.1rem !important;
+			margin-left: 0.5rem;
+			margin-right: 0.3rem;
+		}
+		.fix-react {
+			margin-right: 0.4rem;
 		}
 
 	</style>
@@ -74,6 +81,8 @@ export default class Skills extends HTMLElement {
 
 		if(skillName === "figma" && !vertical)
 			listItem.classList.add("fix-figma");
+		if(skillName === "react" && !vertical)
+			listItem.classList.add("fix-react");
 
 		listItem.replaceChildren(icon.cloneNode(true));
 		list?.appendChild(listItem!.cloneNode(true));
