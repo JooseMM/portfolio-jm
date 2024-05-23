@@ -131,6 +131,9 @@ template.innerHTML = `
 			span {
 				top: 70%;
 			}
+			.skills {
+				margin-top: 1.5rem;
+			}
 		}
 		@media only screen and (min-width: 1440px) {
 			.image-container img {
