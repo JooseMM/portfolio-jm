@@ -7,7 +7,7 @@ template.innerHTML = `
 		.list {
 			display: flex;
 			flex-direction: row;
-			justify-content: space-between;
+			justify-content: center;
 			align-items: center;
 			background-color: #BECCCC;
 			border-radius: 10px;
@@ -16,8 +16,9 @@ template.innerHTML = `
 			padding-top: 0.8rem;
 			padding-bottom: 0.5rem;
 		}
+		li:not(:last-child) {
+			margin-right: 0.5rem;
 		}
-		
 		.vertical {
 			flex-direction: column;
 			padding: 1rem 0.5rem;
@@ -25,14 +26,13 @@ template.innerHTML = `
 		.dark {
 			background-color: #4C8080;
 		}
-		.fix-figma {
+		.list > .fix-figma {
 			margin-left: 0.5rem;
-			margin-right: 0.3rem;
+			margin-right: 0.8rem;
 		}
-		.fix-react {
-			margin-right: 0.4rem;
+		.list > .fix-react {
+			margin-right: 0.8rem;
 		}
-
 	</style>
 	<ul>
 	</ul>`;

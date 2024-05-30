@@ -10,6 +10,7 @@ template.innerHTML = `
 			align-items: center;
 			justify-content: center;
 			margin-inline: 10vw;
+			padding-bottom: 4rem;
 		}
 		p {
 			opacity: 0.85;
