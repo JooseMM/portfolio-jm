@@ -37,6 +37,14 @@ template.innerHTML = `
 			background-color: #004040;
 			color: white;
 		}
+		@media only screen and (min-width: 1000px) {
+			.projects-container {
+				grid-template-columns: 700px 300px;
+				justify-content: center;
+				gap: 1.5rem;
+			}
+
+		}
 	</style>
 	<section>
 		<div class="header-container">
@@ -64,6 +72,17 @@ template.innerHTML = `
 				<span slot="title">Check</span>
 				<span slot="type">Generator</span>
 				<span slot="description">Aplicación pensada para acelerar la creación de cuentas de cobro en formato PDF</span>
+			</project-box>
+			<project-box 
+				stack="angular express figma tailwind"
+				phone-img="src/assets/projects/images/todo-phone.png"
+				pc-img="src/assets/projects/images/todo-pc.png"
+				view="https://todo-app-jm.netlify.app/home"
+				code="https://github.com/JooseMM/angular-todo"
+				>
+				<span slot="title">Todo</span>
+				<span slot="type">App</span>
+				<span slot="description">Desarrollada para recordar pequeñas tareas personales desde cualquier dispositivo.</span>
 			</project-box>
 			
 		</ul>

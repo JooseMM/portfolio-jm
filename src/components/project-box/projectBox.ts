@@ -1,5 +1,9 @@
 import normalize from "../../normalize";
 
+const wide = document.createElement("template");
+wide.innerHTML = `
+	<h4>Hello</h4>
+`;
 const template = document.createElement("template");
 template.innerHTML = `
 	<style>
@@ -21,8 +25,13 @@ template.innerHTML = `
 			letter-spacing: 1px;
 		}
 		#phone-img {
-			transform: translateY(20px);
-			margin-right: 1rem;
+			transform: translate(30px, 30px);
+			position: relative;
+			z-index: 10;
+		}
+		#pc-img {
+			transform: translateX(-20px);
+			position: relative;
 		}
 		.code {
 			border: #8AAEAE solid 1px;
@@ -95,6 +104,11 @@ template.innerHTML = `
 		.dark-img {
 			background-color: inherit;
 		}
+		@media only screen and (min-width: 1000px) {
+			li {
+				max-width: none;
+			}
+		}
 	</style>
 	<li>
 		<div class="image-container">
@@ -106,7 +120,7 @@ template.innerHTML = `
 				<h3 class="title"><slot name="title">Default text</slot></h3>&nbsp;<span class="type"><slot name="type"></slot></span>
 			</div>
 			<p><slot name="description">Default description</slot></p>
-			<skill-bar id="skill" vertical="false" dark="false"></skill-bar>
+			<skill-bar vertical="false" dark="false"></skill-bar>
 			<div class="cta-container">
 				<a href="#" id="view" class="main-button">Visitar</a>
 				<a href="#" id="code" class="code" >Codigo</a>
@@ -120,14 +134,19 @@ export default class ProjectBox extends HTMLElement {
 	constructor() {
 		super();
 		this.attachShadow({ mode: "open" });
-		this.shadowRoot?.appendChild(template.content.cloneNode(true));
+		this.shadowRoot?.replaceChildren(template.content.cloneNode(true));
 	}
-	static observedAttributes = [ "dark", "vertical", "stack", "phone-img", "pc-img", "view", "code" ];
+	static observedAttributes = [ "dark", "long", "stack", "phone-img", "pc-img", "view", "code" ];
 
 	connectedCallback() {
 		const resetCSS = new CSSStyleSheet();
-		resetCSS.replaceSync(normalize);
 		this.shadowRoot?.adoptedStyleSheets.push(resetCSS);
+		window.onresize = () => {
+			if(window.innerWidth > 999)
+				this.shadowRoot?.replaceChildren(wide);
+		}
+		resetCSS.replaceSync(normalize);
+		
 	}
 	attributeChangedCallback(name: string, _oldValue: string, newValue: string) {
 		const phone = this.shadowRoot?.querySelector("#phone-img");
@@ -178,12 +197,11 @@ export default class ProjectBox extends HTMLElement {
 		type?.classList.toggle("dark-type", dark);
 		view?.classList.toggle("dark-button", dark);
 		code?.classList.toggle("dark-code", dark);
+
 	}
 	setStackIcons(stack: string) {
 		const stackArr = stack.split(" ");
 		const skillBar = this.shadowRoot?.querySelector("skill-bar")
-		console.log(stackArr);
 		stackArr.forEach((item)=> skillBar?.setAttribute(item, "true"));
-		console.log(skillBar);
 	}
 }
