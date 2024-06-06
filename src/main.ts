@@ -5,7 +5,7 @@ import Skills from "./components/skills/skills";
 import Projects from "./components/projects/projects";
 import Footer from "./components/footer/footer";
 import About from "./components/about/about";
-import ProjectBox from "./components/project-box/projectBox";
+import ProjectBox from "./components/project/project";
 
 customElements.define("navbar-section", Navbar);
 customElements.define("hero-section", Hero);

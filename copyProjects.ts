@@ -10,7 +10,7 @@ template.innerHTML = `
 			justify-content: center;
 			align-content: center;
 			text-align: center;
-			padding: 5rem 5vw;
+			padding: 5rem 10vw;
 		}
 		h2 {
 			margin: 0;
@@ -25,11 +25,10 @@ template.innerHTML = `
 			margin-inline: auto; 
 		}
 		.projects-container {
-			display: grid;
 			padding-top: 1.5rem;
+			display: grid;
 			grid-template-columns: 1fr;
-			width: 1100px;
-			grid-gap: 2rem 0rem;
+			width: 100%;
 		}
 		.dark-theme {
 			background-color: #006666;
@@ -38,17 +37,13 @@ template.innerHTML = `
 			background-color: #004040;
 			color: white;
 		}
-		@media only screen and (min-width: 1200px) {
-		
+		@media only screen and (min-width: 1000px) {
 			.projects-container {
-				grid-template: 280px 280px / 700px 350px ;
-				grid-gap: 1.5rem;
-				margin-inline: auto;
+				grid-template: 220px 220px / 700px 300px;
+				justify-content: center;
+				gap: 1.5rem;
 			}
-			[long="true"] {
-				grid-row: 1 / span 2;
-				grid-column: 2 / 3;
-			}
+
 		}
 	</style>
 	<section>
@@ -57,8 +52,7 @@ template.innerHTML = `
 		</div>
 		<ul class="projects-container">
 			<project-box 
-				dark="false"
-				stack="angular express figma tailwind typescript"
+				stack="angular express figma tailwind"
 				phone-img="src/assets/projects/images/todo-phone.png"
 				pc-img="src/assets/projects/images/todo-pc.png"
 				view="https://todo-app-jm.netlify.app/home"
@@ -69,7 +63,6 @@ template.innerHTML = `
 				<span slot="description">Desarrollada para recordar pequeñas tareas personales desde cualquier dispositivo.</span>
 			</project-box>
 			<project-box 
-				long="true"
 				stack="react figma typescript"
 				phone-img="src/assets/projects/images/pdf-generator-phone.png"
 				pc-img="src/assets/projects/images/pdf-generator-pc.png"
@@ -91,9 +84,8 @@ template.innerHTML = `
 				<span slot="type">App</span>
 				<span slot="description">Desarrollada para recordar pequeñas tareas personales desde cualquier dispositivo.</span>
 			</project-box>
-
+			
 		</ul>
-		
 	</section>
 `;
 
@@ -117,7 +109,7 @@ export default class Projects extends HTMLElement {
 		const section = this.shadowRoot?.querySelector("section");
 		const header = this.shadowRoot?.querySelector(".header-container");
 
-		projects?.forEach((value) => value.setAttribute("dark", newValue));
+		projects?.forEach((child) => child.setAttribute("dark", newValue));
 		section?.classList.toggle("dark-theme", newValue === "true" ? true: false);
 		header?.classList.toggle("dark-header", newValue === "true" ? true: false);
 
