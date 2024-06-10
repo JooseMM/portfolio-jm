@@ -154,9 +154,9 @@ template.innerHTML = `
 			<h1>Soy <b id="hHeader">Jose</b>, Frontend Dev.</h1>
 			<p>¡Hola! Mi nombre es <b id="hParagraph">Jose Moreno</b>, un desarrollador web autodidacta, con bases fuertes en diseño de UI UX.</p>
 			<div class="cta-container">
-				<a class="cta-button " href="#" >Contratame</a>
+				<a class="cta-button " href="/contact.html" >Contratame</a>
 				<div class="container-decorator">
-					<a href="#">Proyectos</a>
+					<a href="#projectSection">Proyectos</a>
 					<span id="decorator"></span>
 				</div>
 			</div>

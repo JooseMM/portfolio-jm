@@ -28,7 +28,6 @@ template.innerHTML = `
 			display: grid;
 			padding-top: 1.5rem;
 			grid-template-columns: 1fr;
-			width: 1100px;
 			grid-gap: 2rem 0rem;
 		}
 		.dark-theme {
@@ -40,14 +39,23 @@ template.innerHTML = `
 		}
 		@media only screen and (min-width: 1200px) {
 		
+			section {
+				padding-top: 6rem;
+				padding-bottom: 10rem;
+			}
 			.projects-container {
 				grid-template: 280px 280px / 700px 350px ;
-				grid-gap: 1.5rem;
+				width: 1100px;
+				grid-gap: 1.8rem;
 				margin-inline: auto;
+				margin-top: 1rem;
 			}
 			[long="true"] {
 				grid-row: 1 / span 2;
 				grid-column: 2 / 3;
+			}
+			.header-container > h2 {
+				font-size: 1.8rem;
 			}
 		}
 	</style>
@@ -78,17 +86,17 @@ template.innerHTML = `
 				>
 				<span slot="title">Check</span>
 				<span slot="type">Generator</span>
-				<span slot="description">Aplicación pensada para acelerar la creación de cuentas de cobro en formato PDF</span>
+				<span slot="description">Genera cuentas de cobro ingresando solo datos de compra, pensado para acelerar tareas administrativas mientras trabajaba en un laboratorio dental</span>
 			</project-box>
 			<project-box 
-				stack="angular express figma tailwind"
+				stack="php"
 				phone-img="src/assets/projects/images/todo-phone.png"
 				pc-img="src/assets/projects/images/todo-pc.png"
 				view="https://todo-app-jm.netlify.app/home"
 				code="https://github.com/JooseMM/angular-todo"
 				>
-				<span slot="title">Todo</span>
-				<span slot="type">App</span>
+				<span slot="title">Test</span>
+				<span slot="type">API</span>
 				<span slot="description">Desarrollada para recordar pequeñas tareas personales desde cualquier dispositivo.</span>
 			</project-box>
 

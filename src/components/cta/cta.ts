@@ -1,3 +1,5 @@
+import normalize from "../../normalize";
+
 const template = document.createElement("template");
 template.innerHTML = `
 	<style>
@@ -33,6 +35,7 @@ template.innerHTML = `
 			h2 {
 				font-size: 3rem;
 				width: auto;
+				text-wrap: wrap;
 			}
 			section {
 				padding-block: 5rem;
@@ -56,5 +59,8 @@ export default class CTA extends HTMLElement {
 		this.shadowRoot?.appendChild(template.content.cloneNode(true));
 	}
 	connectedCallback() {
+		const resetCSS = new CSSStyleSheet();
+		resetCSS.replaceSync(normalize);
+		this.shadowRoot?.adoptedStyleSheets.push(resetCSS);
 	}
 }

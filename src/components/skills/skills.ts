@@ -22,6 +22,7 @@ template.innerHTML = `
 		.vertical {
 			flex-direction: column;
 			padding: 1rem 0.5rem;
+			justify-content: space-around;
 		}
 		.dark {
 			background-color: #4C8080;

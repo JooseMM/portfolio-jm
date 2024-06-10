@@ -94,6 +94,10 @@ template.innerHTML = `
 			background-color: #E09F29;
 		}
 		@media only screen and (min-width: 1200px) {
+			li p {
+				line-height: 1.4rem;
+				letter-spacing: 0.32px;
+			}
 			li:not(li[long="true"]) {
 				margin: 0;
 				max-width: none;
@@ -146,8 +150,29 @@ template.innerHTML = `
 				height: 100%;
 			}
 			li[long="true"] .image-container {
+				position: relative;
 				height: 45%;
-				width: 
+			}
+			li[long="true"] #phone-img {
+				width: 105px;
+				position: absolute;
+				z-index: 10;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 5%;
+			}
+			li[long="true"] #pc-img {
+				width: 260px;
+			}
+			li[long="true"] .description > .header-container {
+				margin-top: 1.2rem;
+			}
+			li[long="true"] .description > p {
+				margin-top: 0.5rem;
+				margin-bottom: 1rem;
+			}
+			li[long="true"] .description .cta-container {
+				margin-top: 1rem;
 			}
 		
 		}

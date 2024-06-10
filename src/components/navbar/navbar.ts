@@ -21,6 +21,7 @@ template.innerHTML = `
 			position: absolute;
 			top: 100%;
 			left: 50%;
+			z-index: 100;
 			transform: translateX(-50%);
 			padding: 4rem 5.5rem;
 			border-radius: 10px;
@@ -236,6 +237,7 @@ export default class Navbar extends HTMLElement {
 		const heroSkills = hero?.shadowRoot?.querySelector("skill-bar");
 		const about = document.querySelector("about-section");
 		const projects = document.querySelector("projects-section");
+		const contact = document.querySelector("contact-section");
 		
 		/*
 		const projects = document.querySelector("projects-section");
@@ -250,6 +252,8 @@ export default class Navbar extends HTMLElement {
 		heroSkills?.setAttribute("dark", String(darkTheme));
 		about?.setAttribute("dark", String(darkTheme));
 		projects?.setAttribute("dark", String(darkTheme));
+		contact?.setAttribute("dark", String(darkTheme));
+
 	}
 
 }
