@@ -44,7 +44,7 @@ export default class Skills extends HTMLElement {
 		this.attachShadow({ mode: "open" });
 		this.shadowRoot?.appendChild(template.content.cloneNode(true));
 	}
-	static observedAttributes = ["angular","tailwind", "react", "typescript", "figma", "express", "dark", "vertical"];
+	static observedAttributes = ["angular","tailwind", "react", "typescript", "figma", "php", "sql", "express", "dark", "vertical"];
 	
 	connectedCallback() {
 		const reset = new CSSStyleSheet();

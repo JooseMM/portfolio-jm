@@ -114,7 +114,7 @@ template.innerHTML = `
 			}
 			.description-container {
 				margin-top: 0;
-				margin-right: 0vw;
+				margin-right: 10vw;
 				align-items: start;
 				font-size: 1.2rem;
 				text-align: left;
@@ -141,7 +141,7 @@ template.innerHTML = `
 				width: 550px;
 			}
 			.description-container {
-				margin-right: 5vw;
+				margin-right: 5wv;
 			}
 		}
 
