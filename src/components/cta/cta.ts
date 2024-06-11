@@ -16,7 +16,7 @@ template.innerHTML = `
 		h2 {
 			font-size: 2.5rem;
 			margin: 0;
-			width: 380px;
+			max-width: 15ch;
 		}
 		.cta-button {
 			color: #004040;
@@ -34,7 +34,7 @@ template.innerHTML = `
 		@media only screen and (min-width: 740px) {
 			h2 {
 				font-size: 3rem;
-				width: auto;
+				max-width: none;
 				text-wrap: wrap;
 			}
 			section {

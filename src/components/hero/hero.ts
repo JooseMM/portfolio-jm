@@ -27,7 +27,7 @@ template.innerHTML = `
 		}
 		.description-container {
 			margin-top: 1rem;
-			width: 300px;
+			max-width: 300px;
 		}
 		.description-container h1 {
 			font-size: 2.5rem;

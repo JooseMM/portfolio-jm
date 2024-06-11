@@ -10,7 +10,7 @@ template.innerHTML = `
 			justify-content: center;
 			align-content: center;
 			text-align: center;
-			padding: 5rem 5vw;
+			padding: 5rem 0vw; 
 		}
 		h2 {
 			margin: 0;
@@ -26,9 +26,11 @@ template.innerHTML = `
 		}
 		.projects-container {
 			display: grid;
+			padding: 0;
 			padding-top: 1.5rem;
 			grid-template-columns: 1fr;
 			grid-gap: 2rem 0rem;
+			justify-items: center;
 		}
 		.dark-theme {
 			background-color: #006666;
@@ -36,6 +38,11 @@ template.innerHTML = `
 		.dark-header {
 			background-color: #004040;
 			color: white;
+		}
+		@media only screen and (min-width: 350px) {
+			section { 
+				padding-inline: 5vw;
+			}
 		}
 		@media only screen and (min-width: 1200px) {
 		
