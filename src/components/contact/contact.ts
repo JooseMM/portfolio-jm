@@ -1,5 +1,5 @@
 import normalize from "../../normalize";
-import img from "./icons/mail.png";
+import { whatsapp, github, linkedin, mail } from "./icons";
 
 const template = document.createElement("template");
 template.innerHTML = `
@@ -72,6 +72,17 @@ template.innerHTML = `
 			border-radius: 100px;
 			margin-right: 1rem;
 		}
+
+		figure svg {
+			width: 35px;
+			height: 35px;
+			margin: 0 auto;
+		}
+		a:last-child figure svg {
+			width: 30px;
+			height: 30px;
+			margin: 0.2rem;
+		}
 		@media only screen and (min-width: 350px) {
 			#heroImage {
 				width: 300px;
@@ -82,11 +93,14 @@ template.innerHTML = `
 				margin-top: 2rem;
 				margin-bottom: 4rem;
 				max-width: 1000px;
-				grid-template-columns: repeat(2, 1fr);
-				grid-gap: 0.5rem 1rem;
+				grid-template: 90px / 1fr 1fr;
+				grid-gap: 1rem 2rem;
 			}
 			.links-container a {
 				font-size: 1.3rem;
+			}
+			.links-container a:not(:last-child) {
+				margin: 0;
 			}
 			a > div {
 				padding: 0.7rem;
@@ -120,22 +134,24 @@ template.innerHTML = `
 		<p>Puedo ser de <b>gran ayuda para tu empresa o proyecto</b>, por lo que acá abajo te dejo todos los medios por los cuales me puedes contactar.</p>
 		<div class="links-container">
 			<a href="mailto:jamm.webdev@gmail.com">
-				<div>
-					<img src="/src/assets/icons/mail.svg" width="25"/>
+				<div id="mail">
 				</div>
 			jamm.webdev@gmail.com
 			</a>
 			<a href="callto:+56932339545">
-				<div>
-					<img src="/src/assets/icons/whatsapp.svg" width="25"/>
+				<div id="whatsapp">
 				</div>
 				( +56 ) 9 3233 9545
 			</a>
 			<a href="https://github.com/JooseMM" target="_blank">
-				<div>
-					<img src="/src/assets/icons/gh.png" width="25"/>
+				<div id="github">
 				</div>
 				github.com/JooseMM
+			</a>
+			<a href="https:www.linkedin.com/in/jamm-dev" target="_blank">
+				<div id="linkedin">
+				</div>
+				linkedin.com/in/jamm-dev
 			</a>
 		</div>
 	</main>
@@ -145,6 +161,7 @@ export default class Contact extends HTMLElement {
 		super();
 		this.attachShadow({ mode: "open" });
 		this.shadowRoot?.appendChild(template.content.cloneNode(true));
+		this.setIcons();
 	}
 
 	static observedAttributes = ["dark"];
@@ -168,8 +185,17 @@ export default class Contact extends HTMLElement {
 			hero?.setAttribute("src", "src/assets/images/about-image-dark.png");
 		else 
 			hero?.setAttribute("src", "src/assets/images/about-image.png");
+	}
+	setIcons() {
+		const mailSelector = this.shadowRoot?.querySelector("#mail");
+		const githubSelector = this.shadowRoot?.querySelector("#github");
+		const whatsappSelector = this.shadowRoot?.querySelector("#whatsapp");
+		const linkedinSelector = this.shadowRoot?.querySelector("#linkedin");
 
-
-
+		mailSelector?.replaceChildren(mail.cloneNode(true));
+		githubSelector?.replaceChildren(github.cloneNode(true));
+		whatsappSelector?.replaceChildren(whatsapp.cloneNode(true));
+		linkedinSelector?.replaceChildren(linkedin.cloneNode(true));
+		
 	}
 }
