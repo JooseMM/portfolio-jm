@@ -93,6 +93,9 @@ template.innerHTML = `
 		.dark-view {
 			background-color: #E09F29;
 		}
+		#view[disable], #code[disable] {
+			opacity: 0.5;
+		}
 		@media only screen and (min-width: 1200px) {
 			li p {
 				line-height: 1.4rem;
@@ -237,7 +240,24 @@ export default class ProjectBox extends HTMLElement {
 			if(newValue)
 				this.shadowRoot?.querySelector("li")
 					?.setAttribute("long", "true");
-				
+			break;
+		case "view":
+			const view = this.shadowRoot?.querySelector("#view");
+			if(newValue === "none") {
+				view?.toggleAttribute("disable", true);
+				break;
+			}
+			view?.setAttribute("href", newValue);
+			view?.setAttribute("target", "_blank");
+			break;
+		case "code":
+			const code = this.shadowRoot?.querySelector("#code");
+			if(newValue === "none") {
+				view?.toggleAttribute("disable", true);
+				break;
+			}
+			code?.setAttribute("href", newValue);
+			code?.setAttribute("target", "_blank");
 			break;
 		}
 	}

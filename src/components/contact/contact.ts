@@ -99,6 +99,10 @@ template.innerHTML = `
 			.links-container a {
 				font-size: 1.3rem;
 			}
+			.links-container a:hover {
+				transform: translateY(-5px);
+				transition: 300ms;
+			}
 			.links-container a:not(:last-child) {
 				margin: 0;
 			}

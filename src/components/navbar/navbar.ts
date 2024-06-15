@@ -163,7 +163,6 @@ export default class Navbar extends HTMLElement {
 
 	connectedCallback() {
 		
-		
 		const resetCSS = new CSSStyleSheet();
 		resetCSS.replaceSync(normalize);
 		this.shadowRoot?.adoptedStyleSheets.push(resetCSS);
@@ -174,11 +173,18 @@ export default class Navbar extends HTMLElement {
 				this.setAttribute("visible", toggledValue);
 			});
 
+		if(localStorage.getItem("darkTheme") === "true") 
+			this.setAttribute("dark", "true");
+
 		this.shadowRoot?.querySelector("#themeBtn")
 			?.addEventListener("click", () => {
 				const toggledValue = this.getAttribute("dark") == "true" ? "false" : "true";
 				this.setAttribute("dark", toggledValue);
+				localStorage.setItem("darkTheme", toggledValue);
 			});
+
+		if(localStorage.getItem("darkTheme") === "true") 
+			this.setAttribute("dark", "true");
 	}
 
 	toggleMenu(visible: boolean) {
@@ -234,7 +240,6 @@ export default class Navbar extends HTMLElement {
 	setExternalThemes(darkTheme: boolean) {
 		const body = document.querySelector("body");
 		const hero = document.querySelector("hero-section");
-		const heroSkills = hero?.shadowRoot?.querySelector("skill-bar");
 		const about = document.querySelector("about-section");
 		const projects = document.querySelector("projects-section");
 		const contact = document.querySelector("contact-section");
@@ -249,7 +254,6 @@ export default class Navbar extends HTMLElement {
 
 		body?.classList.toggle("dark-mode", darkTheme);
 		hero?.setAttribute("dark", String(darkTheme));
-		heroSkills?.setAttribute("dark", String(darkTheme));
 		about?.setAttribute("dark", String(darkTheme));
 		projects?.setAttribute("dark", String(darkTheme));
 		contact?.setAttribute("dark", String(darkTheme));

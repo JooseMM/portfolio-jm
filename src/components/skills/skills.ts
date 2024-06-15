@@ -22,7 +22,12 @@ template.innerHTML = `
 		.vertical {
 			flex-direction: column;
 			padding: 1rem 0.5rem;
-			justify-content: space-around;
+			justify-content: center;
+			align-items: center;
+		}
+		.vertical li:not(:last-child) {
+			margin:0;
+			margin-bottom: 0.8rem;
 		}
 		.dark {
 			background-color: #4C8080;
@@ -44,7 +49,7 @@ export default class Skills extends HTMLElement {
 		this.attachShadow({ mode: "open" });
 		this.shadowRoot?.appendChild(template.content.cloneNode(true));
 	}
-	static observedAttributes = ["angular","tailwind", "react", "typescript", "figma", "php", "sql", "express", "dark", "vertical"];
+	static observedAttributes = ["angular","tailwind", "react", "typescript", "figma", "php", "sql", "express", "mongodb", "dark", "vertical"];
 	
 	connectedCallback() {
 		const reset = new CSSStyleSheet();

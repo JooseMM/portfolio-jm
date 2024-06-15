@@ -197,12 +197,16 @@ export default class Hero extends HTMLElement {
 		const highlighParagraph = this.shadowRoot?.querySelector("#hParagraph");
 		const cta = this.shadowRoot?.querySelector(".cta-button");
 		const decorator = this.shadowRoot?.querySelector("#decorator");
+		const skill = this.shadowRoot?.querySelector("skill-bar");
 
 		if(dark) {
+
 			decorator?.replaceChildren(darkArrowRightIcon.content.cloneNode(true));
+			skill?.setAttribute("dark", "true");
 		}
 		else {
 			decorator?.replaceChildren(lightArrowRightIcon.content.cloneNode(true));
+			skill?.setAttribute("dark", "false");
 		}
 
 		highlighHeader?.classList.toggle("dark-highlight", dark);

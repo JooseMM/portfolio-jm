@@ -73,7 +73,7 @@ template.innerHTML = `
 		<ul class="projects-container">
 			<project-box 
 				dark="false"
-				stack="angular express figma tailwind typescript"
+				stack="angular express tailwind mongodb"
 				phone-img="src/assets/projects/images/todo-phone.png"
 				pc-img="src/assets/projects/images/todo-pc.png"
 				view="https://todo-app-jm.netlify.app/home"
@@ -96,15 +96,15 @@ template.innerHTML = `
 				<span slot="description">Genera cuentas de cobro ingresando solo datos de compra, pensado para acelerar tareas administrativas mientras trabajaba en un laboratorio dental</span>
 			</project-box>
 			<project-box 
-				stack="php"
-				phone-img="src/assets/projects/images/todo-phone.png"
-				pc-img="src/assets/projects/images/todo-pc.png"
-				view="https://todo-app-jm.netlify.app/home"
-				code="https://github.com/JooseMM/angular-todo"
+				stack="php sql"
+				phone-img="src/assets/projects/images/phone-php.png"
+				pc-img="src/assets/projects/images/php-api.png"
+				view="none"
+				code="https://github.com/JooseMM/php_practice_api.git"
 				>
-				<span slot="title">Test</span>
+				<span slot="title">CRUD</span>
 				<span slot="type">API</span>
-				<span slot="description">Desarrollada para recordar pequeñas tareas personales desde cualquier dispositivo.</span>
+				<span slot="description">API escrita en PHP nativo utilizada para el testing diferentes front-end en desarrollo</span>
 			</project-box>
 
 		</ul>
