@@ -135,7 +135,7 @@ template.innerHTML = `
 				margin-top: 0;
 			}
 			.header-container h3, .header-container span {
-				font-size: 1.8rem;
+			    font-size: 1.8rem;
 			}
 			li:not([long="true"]) #phone-img {
 				position: absolute;
