@@ -9,7 +9,7 @@ export default defineConfig({
         contactPage: 'contact.html',
       },
     },
-    assetsInclude: ['./src/assets/*/*', '**/*.html'],
+    assetsInclude: ['./src/assets/*/*', '**/*.html', '**/*.svg'],
   }
 });
 

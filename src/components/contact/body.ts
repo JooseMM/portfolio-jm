@@ -1,4 +1,3 @@
-
 const templateBody = `
 <img id="heroImage" width="300" src=""></img>
 <h1>¡Pongámonos en <b>contacto</b>!</h1>
