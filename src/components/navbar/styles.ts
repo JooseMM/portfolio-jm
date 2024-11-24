@@ -1,5 +1,5 @@
-import sunIcon from "./sunIcon.svg";
-import moonIcon from "./moonIcon.svg";
+import sunIcon from "/assets/images/sunIcon.svg";
+import moonIcon from "/assets/images/moonIcon.svg";
 
 const templateStyle = `
 <style>
