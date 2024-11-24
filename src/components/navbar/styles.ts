@@ -1,6 +1,3 @@
-import sunIcon from "/assets/images/sunIcon.svg";
-import moonIcon from "/assets/images/moonIcon.svg";
-
 const templateStyle = `
 <style>
     header {
@@ -44,7 +41,7 @@ const templateStyle = `
 	display: flex;
 	align-items: baseline;
 	background-color: #639999;
-	background-image: url(${sunIcon}), url(${moonIcon});
+	background-image: url(/sun-icon.svg), url(/moon-icon.svg);
 	background-size: 28px;
 	background-repeat: no-repeat;
 	padding: 5px; 

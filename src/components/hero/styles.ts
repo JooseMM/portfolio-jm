@@ -67,7 +67,7 @@ const templateStyle = `
     }
     .skills {
 	margin-top: 2rem;
-	width: 290px;
+	width: 310px;
     }
     span {
 	position: absolute;

@@ -8,10 +8,10 @@ const templateBody = `
 	</div>
     jamm.webdev@gmail.com
     </a>
-    <a href="callto:+56932339545">
+    <a href="callto:+5632845558">
 	<div id="whatsapp">
 	</div>
-	( +56 ) 9 3233 9545
+	( +56 ) 9 3284 5558
     </a>
     <a href="https://github.com/JooseMM" target="_blank">
 	<div id="github">

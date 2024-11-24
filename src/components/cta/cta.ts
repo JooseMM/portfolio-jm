@@ -14,7 +14,7 @@ template.innerHTML = `
 			text-align: center;
 		}
 		h2 {
-			font-size: 2.5rem;
+			font-size: 2rem;
 			margin: 0;
 			max-width: 15ch;
 		}
@@ -25,8 +25,8 @@ template.innerHTML = `
 			border-radius: 5px;
 			letter-spacing: 1px;
 			background-color: white;
-			font-weight: 500;
-			font-size: 1.5rem;
+			font-weight: 600;
+			font-size: 1.2rem;
 			cursor: pointer;
 			transition: ease-in 200ms;
 			text-decoration: none;
