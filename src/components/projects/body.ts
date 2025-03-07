@@ -4,9 +4,8 @@ import todoPcImage from "/assets/images/todo-pc.png";
 import pdfGenPhoneImage from "/assets/images/pdf-generator-phone.png";
 import pdfGenPcImage from "/assets/images/pdf-generator-pc.png";
 
-import phpPracPhoneImage from "/assets/images/phone-php.png";
-import phpPracPcImage from "/assets/images/pdf-generator-pc.png";
-
+import nutripiaPhoneImage from "/assets/images/nutripia-mobile.png";
+import nutripiaPcImage from "/assets/images/nutripia-mockup.png";
 
 const templateBody = `
 <section>
@@ -14,6 +13,18 @@ const templateBody = `
 	    <h2>Proyectos</h2>
     </div>
     <ul class="projects-container">
+	<project-box 
+	 stack="net tailwind sql angular"
+	 phone-img="${nutripiaPhoneImage}"
+	 pc-img="${nutripiaPcImage}"
+	 view="https://nutripia.netlify.app/"
+	 code="https://github.com/JooseMM/nutripia"
+	>
+	    <span slot="title">Nutripia</span>
+	    <span slot="type">Website</span>
+	    <span slot="description">Landing page y aplicacion de agendamiento de citas nutricionales</span>
+	</project-box>
+
 	<project-box 
 	 dark="false"
 	 stack="angular express tailwind mongodb"
@@ -40,20 +51,7 @@ const templateBody = `
 	    <span slot="description">Genera cuentas de cobro en formato PDF disponibles para descargar utilizando la libreria <b>React-pdf</b>.</span>
 	</project-box>
 
-	<project-box 
-	 stack="php sql"
-	 phone-img="${phpPracPhoneImage}"
-	 pc-img="${phpPracPcImage}"
-	 view="none"
-	 code="https://github.com/JooseMM/php_practice_api.git"
-	>
-	    <span slot="title">CRUD</span>
-	    <span slot="type">API</span>
-	    <span slot="description">API escrita en PHP nativo utilizada para el testing diferentes front-end en desarrollo</span>
-	</project-box>
-
     </ul>
-    
 </section>
 `;
 

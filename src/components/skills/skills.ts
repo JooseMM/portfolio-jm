@@ -42,69 +42,77 @@ template.innerHTML = `
 	</style>
 	<ul>
 	</ul>`;
-	// add php to the list
+// add php to the list
 export default class Skills extends HTMLElement {
-	constructor() {
-		super();
-		this.attachShadow({ mode: "open" });
-		this.shadowRoot?.appendChild(template.content.cloneNode(true));
-	}
-	static observedAttributes = ["angular","tailwind", "react", "typescript", "figma", "php", "sql", "express", "mongodb", "dark", "vertical"];
-	
-	connectedCallback() {
-		const reset = new CSSStyleSheet();
-		reset.replaceSync(resetCSS);
-		this.shadowRoot?.adoptedStyleSheets.push(reset);
-	}
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot?.appendChild(template.content.cloneNode(true));
+  }
+  static observedAttributes = [
+    "angular",
+    "tailwind",
+    "react",
+    "typescript",
+    "figma",
+    "php",
+    "sql",
+    "express",
+    "mongodb",
+    "dark",
+    "vertical",
+    "net",
+  ];
 
-	attributeChangedCallback(name: string, _oldValue: string, newValue: string) {
-		if(name === "dark") {
-			const darkTheme = newValue === "true" ? true : false;
-			this.setInternalTheme(darkTheme);
-		}
-	}
-	checkSkills():string[] {
-		let skills:string[] = [];
+  connectedCallback() {
+    const reset = new CSSStyleSheet();
+    reset.replaceSync(resetCSS);
+    this.shadowRoot?.adoptedStyleSheets.push(reset);
+  }
 
-		Skills.observedAttributes.forEach((key: string)=> {
-			const value = this.getAttribute(key) == "true" ? true : false;
-			if(this.hasAttribute(key) && value && key != "dark" && key != "vertical")
-				skills.push(key);
-		})
+  attributeChangedCallback(name: string, _oldValue: string, newValue: string) {
+    if (name === "dark") {
+      const darkTheme = newValue === "true" ? true : false;
+      this.setInternalTheme(darkTheme);
+    }
+  }
+  checkSkills(): string[] {
+    let skills: string[] = [];
 
-		return skills;
-	}
-	setIcon(skillName: string, darkTheme: boolean) {
-		const list = this.shadowRoot?.querySelector("ul");
-		var icon: DocumentFragment;
-		const listItem = document.createElement("li");
-		const vertical = this.getAttribute("vertical") == "true" ? true : false;
+    Skills.observedAttributes.forEach((key: string) => {
+      const value = this.getAttribute(key) == "true" ? true : false;
+      if (this.hasAttribute(key) && value && key != "dark" && key != "vertical")
+        skills.push(key);
+    });
 
-		if(darkTheme) 
-			icon = icons.get("dark_" + skillName)?.content!;
-		else
-			icon = icons.get("light_" + skillName)?.content!;
+    return skills;
+  }
+  setIcon(skillName: string, darkTheme: boolean) {
+    const list = this.shadowRoot?.querySelector("ul");
+    var icon: DocumentFragment;
+    const listItem = document.createElement("li");
+    const vertical = this.getAttribute("vertical") == "true" ? true : false;
 
-		if(skillName === "figma" && !vertical)
-			listItem.classList.add("fix-figma");
-		if(skillName === "react" && !vertical)
-			listItem.classList.add("fix-react");
+    if (darkTheme) icon = icons.get("dark_" + skillName)?.content!;
+    else icon = icons.get("light_" + skillName)?.content!;
 
-		listItem.replaceChildren(icon.cloneNode(true));
-		list?.appendChild(listItem!.cloneNode(true));
-	}
-	setInternalTheme(darkTheme: boolean):void {
-		const resetNode = document.createElement("ul");
-		const oldList = this.shadowRoot?.querySelector("ul");
-		const vertical = this.getAttribute("vertical") == "true" ? true : false;
-		const skills = this.checkSkills();
+    if (skillName === "figma" && !vertical) listItem.classList.add("fix-figma");
+    if (skillName === "react" && !vertical) listItem.classList.add("fix-react");
 
-		resetNode.classList.toggle("dark", darkTheme);
-		resetNode.classList.toggle("vertical", vertical);
-		resetNode.classList.add("list");
-		resetNode.setAttribute("vertical", vertical ? "true" : "false" );
-		oldList?.replaceWith(resetNode);
-		skills.forEach((skillName) => this.setIcon(skillName, darkTheme));
-	}
-	
+    listItem.replaceChildren(icon.cloneNode(true));
+    list?.appendChild(listItem!.cloneNode(true));
+  }
+  setInternalTheme(darkTheme: boolean): void {
+    const resetNode = document.createElement("ul");
+    const oldList = this.shadowRoot?.querySelector("ul");
+    const vertical = this.getAttribute("vertical") == "true" ? true : false;
+    const skills = this.checkSkills();
+
+    resetNode.classList.toggle("dark", darkTheme);
+    resetNode.classList.toggle("vertical", vertical);
+    resetNode.classList.add("list");
+    resetNode.setAttribute("vertical", vertical ? "true" : "false");
+    oldList?.replaceWith(resetNode);
+    skills.forEach((skillName) => this.setIcon(skillName, darkTheme));
+  }
 }
