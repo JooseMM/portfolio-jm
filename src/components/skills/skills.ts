@@ -57,6 +57,8 @@ export default class Skills extends HTMLElement {
     "figma",
     "php",
     "sql",
+    "html",
+    "css",
     "express",
     "mongodb",
     "dark",

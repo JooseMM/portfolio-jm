@@ -1,5 +1,5 @@
-import todoPhoneImage from "/assets/images/todo-phone.png";
-import todoPcImage from "/assets/images/todo-pc.png";
+import criszulPhoneImage from "/assets/images/criszul-mobile.png";
+import criszulPcImage from "/assets/images/criszul-desktop.png";
 
 import pdfGenPhoneImage from "/assets/images/pdf-generator-phone.png";
 import pdfGenPcImage from "/assets/images/pdf-generator-pc.png";
@@ -27,20 +27,20 @@ const templateBody = `
 
 	<project-box 
 	 dark="false"
-	 stack="angular express tailwind mongodb"
-	 phone-img="${todoPhoneImage}"
-	 pc-img="${todoPcImage}"
+	 stack="typescript html css express"
+	 phone-img="${criszulPhoneImage}"
+	 pc-img="${criszulPcImage}"
 	 view="https://todo-app-jm.netlify.app/home"
 	 code="https://github.com/JooseMM/angular-todo"
 	>
-	    <span slot="title">Todo</span>
-	    <span slot="type">App</span>
-	    <span slot="description">Desarrollada para recordar pequeñas tareas personales desde cualquier dispositivo.</span>
+	    <span slot="title">Criszul</span>
+	    <span slot="type">Lading Page</span>
+	    <span slot="description">Landing page elegante para empresa de envíos, con UI glassy-bento y formulario de contacto.</span>
 	</project-box>
 
 	<project-box 
 	 long="true"
-	 stack="react figma typescript"
+	 stack="react figma typescript css"
 	 phone-img="${pdfGenPhoneImage}"
 	 pc-img="${pdfGenPcImage}"
 	 view="https://cuentas-pdf.netlify.app/"
