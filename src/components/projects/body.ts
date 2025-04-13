@@ -30,8 +30,8 @@ const templateBody = `
 	 stack="typescript html css express"
 	 phone-img="${criszulPhoneImage}"
 	 pc-img="${criszulPcImage}"
-	 view="https://todo-app-jm.netlify.app/home"
-	 code="https://github.com/JooseMM/angular-todo"
+	 view="https://criszul.netlify.app"
+	 code="https://github.com/JooseMM/criszul-frontend"
 	>
 	    <span slot="title">Criszul</span>
 	    <span slot="type">Lading Page</span>
